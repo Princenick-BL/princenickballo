@@ -19,8 +19,6 @@ export default function Home() {
         <meta charSet="UTF-8"/>
         <title>DEVELOPPEUR WEB</title>
         <meta name="description" content="Prenez plaisir à me découvrir à travers mes compétences et mes aptitudes" />
-        <meta name="theme-color" content="#ffffff"/>
-
         {
           /* Lien font googlr */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
