@@ -1,0 +1,40 @@
+
+.global{
+    z-index: 5000;
+    max-width: 50px;
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    position: fixed;
+
+    p{
+        transform: rotate(-90deg);
+        height: fit-content;
+        white-space: nowrap;
+        font-size: 1.4em;
+        font-family: 'Lobster', cursive;
+        margin-bottom: 2em;
+    }
+    .media{
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        background-color: #fff;
+        box-shadow: 0 3px 5px 0 rgb(0 0 0 / 10%);
+        margin: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            border-radius: 50%;
+        }
+        
+        
+    }
+
+
+}
