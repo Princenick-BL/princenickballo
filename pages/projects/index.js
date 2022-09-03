@@ -186,7 +186,12 @@ export default function Projets() {
             <div className="portfolio">
               <h1>MES PROJETS</h1>
               <div className="projets">
-                <ProjectCard/>
+                {/* <ProjectCard
+                  data = {{
+                    title : "A-Recruit ( Confidentiel )",
+                    desc : "Il s'agit de la création avec une équipe de developpeur, d'un logiciel embarquant plusieurs outils de travail et plusieurs fonctionnalités pour les besoins de l'entreprise."
+                  }}
+                /> */}
                 <div className="projet">
                   <div>
                     <div className="img phenix"></div>

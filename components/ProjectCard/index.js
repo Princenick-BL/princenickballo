@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './index.module.scss'
 
-export default function ProjectCard() {
+export default function ProjectCard({data}) {
   return (
     <div className={styles.card}>
         <Image
@@ -11,7 +11,16 @@ export default function ProjectCard() {
             layout="responsive"
             src="/images/my-app.png"
         />
-        <div className={styles.banner}>
+        <div className={styles.elmt}>
+            <div className={styles.banner}>
+            </div>
+            <div className={styles.cnt}> 
+                <p>{data?.title}</p>
+            
+                <p>
+                    {data?.desc}
+                </p>
+            </div>
         </div>
     </div>
   )

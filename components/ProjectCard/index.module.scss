@@ -10,6 +10,7 @@
     display:flex ;
     flex-direction: column;
     overflow: hidden;  
+    position: relative;
     @media screen and (max-width:500px){
         flex-direction: column;
         width: 100%;
@@ -88,6 +89,15 @@
             color: blue;
         }                   
     }
+    .elmt{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        .cnt{
+            background-color: #fff;
+        }
+    }
     .banner{
         min-height: 50px;
         background-size: cover;
@@ -95,47 +105,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 1rem;
-        .search{
-          width: 70%;
-          padding: 1rem;
-          padding-top: .5rem;
-          padding-bottom: .5rem;
-          border-radius: 50px;
-          border: 1px solid #f3f3f3;
-          font-size: 1rem;
-          margin-top: 40px;
-          @media only screen and (max-width: 500px) {
-            width: 90%;
-             // display: none;
-          }
-        }
-      }
+        padding: 1rem;
+    }
       
-      .banner {
-        position: relative;
-        top: 0;
-        width: 100%;
-        background-size: cover;
-        margin-bottom: 0;
-      }
+     
       
-      .banner:before {
+    .banner:before {
         content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
-        height: 200px;
-      }
+        height: 50px;
+    }
       
-      .banner:after {
+    .banner:after {
         content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
         width: 100%;
-        height: 200px;
+        height: 50px;
         background: linear-gradient(360deg, #fff, transparent);
-      }
+    }
 }
