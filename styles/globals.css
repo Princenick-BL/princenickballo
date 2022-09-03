@@ -62,6 +62,9 @@ a {
   height: 3px;
   background-color: brown;
 }
+:root {
+	--color-primary: brown;
+}
 .video{
   max-width: 100%;
   max-height: 50%;

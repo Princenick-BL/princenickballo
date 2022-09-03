@@ -186,9 +186,9 @@ export default function Projets() {
               <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
                 <div>
                   <p>{new Date().toDateString()}</p>
-                  <h1>MES PROJETS</h1>
+                  <h1 style={{color:"var(--color-primary)"}}>MES PROJETS</h1>
                 </div>
-                <Link href={"#"}>
+                <Link href={"/"}>
                   <a>
                     <FaHome fontSize={24}/>
                   </a>
@@ -204,6 +204,7 @@ export default function Projets() {
                 />
 
                 <ProjectCard
+                  odd={true}
                   data = {{
                     url : "/images/my-app.png",
                     title : "Mon site web",

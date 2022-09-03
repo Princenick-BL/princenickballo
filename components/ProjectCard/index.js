@@ -2,12 +2,12 @@ import React,{useState} from 'react'
 import Image from 'next/image'
 import styles from './index.module.scss'
 
-export default function ProjectCard({data}) {
+export default function ProjectCard({data,odd=false}) {
 
     const [size,setSize] = useState({})
 
     return (
-        <div className={styles.card}>
+        <div className={styles.card + " "+ (odd? styles.odd : "")}>
             <Image
                 onLoad={({ target }) => {
                     const { naturalWidth, naturalHeight } = target ;
