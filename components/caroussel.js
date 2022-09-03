@@ -6,7 +6,7 @@ export default class caroussel extends Component {
     render() {
         return (
             <div style={{display:"flex"}}>
-				<MediaLeft />
+				{/* <MediaLeft /> */}
 				{/* <div className="untitled">
 					
 					<div className="untitled__slides">
