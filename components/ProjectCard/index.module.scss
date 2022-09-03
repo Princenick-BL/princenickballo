@@ -124,4 +124,14 @@
 }
 .odd{
     border-color: var(--color-primary);
+    .elmt{
+        
+        .cnt{
+            background-color: var(--color-primary);
+            color: #fff;
+        }
+    }
+    .banner:after {
+        background: linear-gradient(360deg, var(--color-primary), transparent);
+    }
 }
