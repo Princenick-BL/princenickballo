@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Link from 'next/link';
-import Image from 'next/image';
+import Head from 'next/head';
 import styles from './index.module.scss'
 import Domaines from '../../components/utills/domaines/domaines'
 import Popup from '../../components/utills/popup/popup'
@@ -11,7 +11,37 @@ export default function Projets() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        {/* <!-- HTML Meta Tags --> */}
+        <meta charSet="UTF-8"/>
+        <title>PROJETS</title>
+        <meta name="description" content="Projet logiciels" />
+        <meta name="theme-color" content="#f3f3f3"/>
 
+        {
+          /* Lien font googlr */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://princenickballo.fr" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="PROJETS" />
+        <meta property="og:description" content="Projet logiciels" />
+        <meta property="og:image" content="/images/preview.png" />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="princenickballo.fr" />
+        <meta property="twitter:url" content="https://princenickballo.fr" />
+        <meta name="twitter:title" content="PROJETS" />
+        <meta name="twitter:description" content="Projet logiciels" />
+        <meta name="twitter:image" content="/images/preview.png" />
+
+        {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
+
+      </Head>
       <p>{new Date().toDateString()}</p>
 
       <div className="index LayoutVerticalœ">

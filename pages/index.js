@@ -13,8 +13,8 @@ export default function Home() {
       <Head>
         {/* <!-- HTML Meta Tags --> */}
         <meta charSet="UTF-8"/>
-        <title>DEVELOPPEUR WEB</title>
-        <meta name="description" content="Prenez plaisir à me découvrir à travers mes compétences et mes aptitudes" />
+        <title>PRINCE NICK BALLO - INGENIEUR LOGICIEL</title>
+        <meta name="description" content="Prince Nick BALLO : Ingénieur logiciel, Développeur Full Stack Javascript, Developpeurs de themes et plugins Wordpress, Symfony developpeur, Data anylste python" />
         <meta name="theme-color" content="#f3f3f3"/>
 
         {
@@ -26,16 +26,16 @@ export default function Home() {
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://princenickballo.fr" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="DEVELOPPEUR WEB" />
-        <meta property="og:description" content="Prenez plaisir à me découvrir à travers mes compétences et mes aptitudes" />
+        <meta property="og:title" content="PRINCE NICK BALLO - INGENIEUR LOGICIE" />
+        <meta property="og:description" content="Prince Nick BALLO : Ingénieur logiciel, Développeur Full Stack Javascript, Developpeurs de themes et plugins Wordpress, Symfony developpeur, Data anylste pythons" />
         <meta property="og:image" content="/images/preview.png" />
 
         {/* <!-- Twitter Meta Tags --> */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="princenickballo.fr" />
         <meta property="twitter:url" content="https://princenickballo.fr" />
-        <meta name="twitter:title" content="DEVELOPPEUR WEB" />
-        <meta name="twitter:description" content="Prenez plaisir à me découvrir à travers mes compétences et mes aptitudes" />
+        <meta name="twitter:title" content="PRINCE NICK BALLO - INGENIEUR LOGICIE" />
+        <meta name="twitter:description" content="Prince Nick BALLO : Ingénieur logiciel, Développeur Full Stack Javascript, Developpeurs de themes et plugins Wordpress, Symfony developpeur, Data anylste python" />
         <meta name="twitter:image" content="/images/preview.png" />
 
         {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
