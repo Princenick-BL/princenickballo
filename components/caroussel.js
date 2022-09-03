@@ -7,7 +7,7 @@ export default class caroussel extends Component {
         return (
             <div style={{display:"flex"}}>
 				<MediaLeft />
-				{/* <div className="untitled">
+				<div className="untitled">
 					
 					<div className="untitled__slides">
 						<div className="untitled__slide">
@@ -66,7 +66,7 @@ export default class caroussel extends Component {
 							</Link>
 						</li>
 					</ul>
-				</nav> */}
+				</nav>
 			</div>
         )
     }
