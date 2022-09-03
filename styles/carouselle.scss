@@ -267,8 +267,14 @@
 			justify-content: space-around;
 			padding-right: 50px;
 			width: 100%;
+			margin: 0;
+			padding: 1rem;
+			
 			li:nth-child(1){
 				margin-top: 0;
+			}
+			li:last-child{
+				margin-bottom: 0;
 			}
 			li{
 				margin-top: 1rem;

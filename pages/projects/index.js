@@ -191,7 +191,7 @@ export default function Projets() {
                       <div className="title">
                         A-Recruit ( Confidentiel )
                       </div>
-                      <div className="stack ">
+                      {/* <div className="stack ">
                         <div>Next.js </div>
                         <div>Node.js </div>
                         <div>Express.js </div>
@@ -200,10 +200,10 @@ export default function Projets() {
                         <div>JavaScript</div>
                         <div>Postgresql </div>
                         <div>AWS </div>
-                      </div>
-                      <div className="linkzone"> 
+                      </div> 
+                       <div className="linkzone"> 
                         <a href="#"  className="desable">{"Lien Protégé ( Projet d'entreprise )"} &#x2192;</a>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className="description">

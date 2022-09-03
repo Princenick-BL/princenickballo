@@ -54,7 +54,7 @@ export default class caroussel extends Component {
 					
 				</div>
 				<nav className="untitled__nav">
-					<ul>
+				<ul>
 						<li>
 							<Link href='/blog'>
 								<a >BLOG</a>
