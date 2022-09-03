@@ -29,13 +29,13 @@ export default class MediaLeft extends Component {
                         </div>
                     </a>
                 </Link>
-                <Link href="tel:+33754509649">
+                {/* <Link href="tel:+33754509649">
                     <a>
                         <div className={style.media}>
                             <Image width={25} height={25} src="/icons/tel.jpeg" alt="phone"/>
                         </div>
                     </a>
-                </Link>
+                </Link> */}
             </div>
         )
     }

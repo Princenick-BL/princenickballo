@@ -277,9 +277,7 @@
            
 
             h1{
-                margin: 0 auto;
-                text-align: center;
-                margin: 1em;
+                font-size: 1.5rem;
             }
 
             .projets{
@@ -290,11 +288,12 @@
                 max-width: 100%;
                 justify-content: center;
                 .projet{
-                    margin: 1em;
+                    margin-top: 1em;
                     width: 370px;
                    
                     background-color: #fff;
-                    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                     border-radius: 10px;      
                     display:flex ;
                     flex-direction: column;

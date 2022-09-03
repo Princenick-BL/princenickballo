@@ -56,13 +56,18 @@ export default class caroussel extends Component {
 				<nav className="untitled__nav">
 					<ul>
 						<li>
-							<Link href='/who'>
-								<a >MOI</a>
+							<Link href='/blog'>
+								<a >BLOG</a>
 							</Link>
 						</li>
 						<li>
 							<Link href='/projects'>
 								<a>MES PROJETS</a>
+							</Link>
+						</li>
+						<li>
+							<Link href='/who'>
+								<a >MOI</a>
 							</Link>
 						</li>
 					</ul>

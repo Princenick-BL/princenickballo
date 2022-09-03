@@ -9,7 +9,6 @@ import Popup from '../components/utills/popup/popup'
 
 export default function Home() {
 
-  const [show_auth,setShowAuth]=useState(false)
 
   return (
     <>
@@ -18,7 +17,7 @@ export default function Home() {
         <meta charSet="UTF-8"/>
         <title>DEVELOPPEUR WEB</title>
         <meta name="description" content="Prenez plaisir à me découvrir à travers mes compétences et mes aptitudes" />
-        <meta name="theme-color" content="#f0f0f0"/>
+        <meta name="theme-color" content="#f3f3f3"/>
 
         {
           /* Lien font googlr */}
