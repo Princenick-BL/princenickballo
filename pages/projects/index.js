@@ -186,196 +186,62 @@ export default function Projets() {
             <div className="portfolio">
               <h1>MES PROJETS</h1>
               <div className="projets">
-                {/* <ProjectCard
+                <ProjectCard
                   data = {{
+                    url : "/images/phenix.jpg",
                     title : "A-Recruit ( Confidentiel )",
                     desc : "Il s'agit de la création avec une équipe de developpeur, d'un logiciel embarquant plusieurs outils de travail et plusieurs fonctionnalités pour les besoins de l'entreprise."
                   }}
-                /> */}
-                <div className="projet">
-                  <div>
-                    <div className="img phenix"></div>
-                    <div className="desc">
-                      <div className="title">
-                        A-Recruit ( Confidentiel )
-                      </div>
-                      <div className="stack ">
-                        <div>Next.js </div>
-                        <div>Node.js </div>
-                        <div>Express.js </div>
-                        <div>HTML</div>
-                        <div>SCSS </div>
-                        <div>JavaScript</div>
-                        <div>Postgresql </div>
-                        <div>AWS </div>
-                      </div> 
-                       <div className="linkzone"> 
-                        <a href="#"  className="desable">{"Lien Protégé ( Projet d'entreprise )"} &#x2192;</a>
-                      </div> 
-                    </div>
-                  </div>
-                  <div className="description">
-                      {"Il s'agit de la création avec une équipe de developpeur, d'un logiciel embarquant plusieurs outils de travail et plusieurs fonctionnalités pour les besoins de l'entreprise."}                    
-                  </div>
-                   
-                </div>
+                />
+
+                <ProjectCard
+                  data = {{
+                    url : "/images/my-app.png",
+                    title : "Mon site web",
+                    desc : "Il s'agit de cette page que vous consultez. Je l'ai réalisé avec le framework Next.js avec les langages comme le HTML, le CSS, le JavaScript et en utilisant les outils de photoshop."
+                  }}
+                />
               
-                <div className="projet">
-                  <div>
-                    <div className="img my-app"></div>
-                    <div className="desc">
-                      <div className="title">
-                        Mon site web
-                      </div>
-                      <div className="stack ">
-                        <div>Next.js </div>
-                        <div>HTML</div>
-                        <div>SCSS </div>
-                        <div>JavaScript</div>
+              
+                <ProjectCard
+                  data = {{
+                    url : "/images/ga-eilco.png",
+                    title : "GA-EILCO",
+                    desc : "A la tête d'une équipe de développeur, il fallait developper un outil centralisé, du système de gestion des absences d'une université ."
+                  }}
+                />
+           
 
-                      </div>
-                      <div className="linkzone"> 
-                        <a href="https://github.com/Princenick-BL/my-app">Lien GitHub &#x2192;</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="description">
-                      {"Il s'agit de cette page que vous consultez."+
-                      "Je l'ai réalisé avec le framework Next.js avec"+
-                      " les langages comme le HTML, le CSS, le JavaScript"+
-                      " et en utilisant les outils de photoshop."}                    
-                  </div>
-                </div>
-                  
-                <div className="projet">
-                  <div>
-                    <div className="img  ga-eilco"></div>
-                    <div className="desc">
-                      <div className="title">
-                        GA-EILCO
-                      </div>
-                      <div className="stack ">
-                        <div>React.js</div>
-                        <div>Next.js </div>
-                        <div>Express.js </div>
-                        <div>HTML</div>
-                        <div>CSS </div>
-                        <div>JavaScript</div>
-                        <div> Mysql </div>
-                      </div>
-                      <div className="linkzone"> 
-                        <a href="#" className="desable">{"Lien Protégé ( Projet d'entreprise )"} &#x2192;</a>
-                      </div>
-                    </div>
-                    </div>
-                    <div className="description">
-                      {"A la tête d'une équipe de développeur,"+
-                      "il fallait developper un outil centralisé,"+
-                      "du système de gestion des absences d'une université ."}
-                    </div>
-                  </div>
+                <ProjectCard
+                  data = {{
+                    url : "/images/cv.png",
+                    title : "Mes début avec React.js ( CV React)",
+                    desc :"Prise en main de React.js avec la réalisation , d'un cv web."
+                  }}
+                />
 
-                  <div className="projet">
-                    <div>
-                      <div className="img  mon-cv"></div>
-                      <div className="desc">
-                        <div className="title">
-                          Mes début avec React.js ( CV React)
-                        </div>
-                        <div className="stack ">
-                          <div>React.js</div>
-                          <div>HTML</div>
-                          <div>CSS </div>
-                          <div>JavaScript</div>
-                        </div>
-                        <div className="linkzone"> 
-                        <a href="https://github.com/Princenick-BL/curriculum-vitae">Lien GitHub &#x2192;</a>
-                        <br></br>
-                        <br></br>
-                          <Link href="https://princenick-bl.github.io/curiculum-vitae">
-                            <a>{"Lien vers le site"} &#x2192;</a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="description">
-                      {"Prise en main de React.js avec la réalisation ,"+
-                        " d'un cv web."}
-                    </div>
-                  </div>
+                <ProjectCard
+                  data = {{
+                    url : "/images/auth.png",
+                    title : "Google - Facebook authentification",
+                    desc :"Il est question ici d'une application"+
+                    " permettant de s'authentifier en utilisant"+
+                    " son compte google ou facebook."
+                  }}
+                />
 
+                <ProjectCard
+                  data = {{
+                    url : "/images/covid.png",
+                    title : " Gestion de cas COVID en entreprise",
+                    desc :"C'est une application pour le suivi de "+
+                    "l'évolution de la covid-19 au sein d'une "+
+                    "entreprise et de la gestion du personnel. "+
+                    "Elle a été réalisée en équipe avec la mise "+
+                    "en pratique des méthodes agiles."
+                  }}
+                />
 
-                  <div className="projet">
-                  <div>
-                    <div className="img  auth"></div>
-                    <div className="desc">
-                      <div className="title">
-                        Google - Facebook authentification
-                      </div>
-                      <div className="stack ">
-                        <div>React.js {"&"} Node.js</div>
-                        <div>HTML</div>
-                        <div>CSS </div>
-                        <div>JavaScript</div>
-                        <div> Mysql </div>
-                        <div> Google auth api </div>
-                        <div> Facebook auth api </div>
-                      </div>
-                      <div className="linkzone"> 
-                        <a href="https://github.com/Princenick-BL/login-signin-app">Lien GitHub &#x2192;</a>
-                        <br></br>
-                        <br></br>
-                        {show_auth && 
-                          <>
-                            <Popup
-                              show_hide={show_auth}
-                              callback={(e)=>{setShowAuth(false)}}
-                            >
-                              <iframe className="video" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6784459821665148928?compact=1" allowFullScreen="" title="Post intégré" width="504" height="284" frameBorder="0"></iframe>
-                            </Popup>
-                          </>
-                        }
-                        <a href="#" onClick={(e)=>{e.preventDefault();setShowAuth(true)}}>Lien de présentation &#x2192;</a>
-                      </div>
-                    </div>
-                    </div>
-                    <div className="description">
-                      {"Il est question ici d'une application"+
-                      " permettant de s'authentifier en utilisant"+
-                      " son compte google ou facebook."}
-                    </div>
-                  </div>
-                  <div className="projet">
-                    <div>
-                      <div className="img  covid"></div>
-                        <div className="desc">
-                          <div className="title">
-                            Gestion de cas COVID en entreprise
-                          </div>
-                          <div className="stack ">
-                            <div>HTML</div>
-                            <div>CSS </div>
-                            <div>JavaScript</div>
-                            <div>PHP</div>
-                            <div> Mysql </div>
-                          </div>
-                          <div className="linkzone"> 
-                            <a href="https://github.com/Princenick-BL/login-signin-app">Lien GitHub &#x2192;</a>
-                            
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="description">
-                        {"C'est une application pour le suivi de "+
-                        "l'évolution de la covid-19 au sein d'une "+
-                        "entreprise et de la gestion du personnel. "+
-                        "Elle a été réalisée en équipe avec la mise "+
-                        "en pratique des méthodes agiles."}
-                      </div>
-
-                  </div>
-                  
               </div>
 
               
