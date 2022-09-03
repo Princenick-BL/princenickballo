@@ -4,6 +4,8 @@ import Head from 'next/head';
 import styles from './index.module.scss'
 import Domaines from '../../components/utills/domaines/domaines'
 import Popup from '../../components/utills/popup/popup'
+import Image from 'next/image';
+import ProjectCard from '../../components/ProjectCard';
 
 export default function Projets() {
 
@@ -16,7 +18,7 @@ export default function Projets() {
         <meta charSet="UTF-8"/>
         <title>PROJETS</title>
         <meta name="description" content="Projet logiciels" />
-        <meta name="theme-color" content="#f3f3f3"/>
+        <meta name="theme-color" content="#fff"/>
 
         {
           /* Lien font googlr */}
@@ -184,6 +186,7 @@ export default function Projets() {
             <div className="portfolio">
               <h1>MES PROJETS</h1>
               <div className="projets">
+                <ProjectCard/>
                 <div className="projet">
                   <div>
                     <div className="img phenix"></div>
@@ -373,12 +376,13 @@ export default function Projets() {
               
             </div>
           </div>
+          <br></br>
 
-          <div className="lastbtn">
+          {/* <div className="lastbtn">
               <a className="btn" href="https://www.canva.com/design/DAEmEjXbW4o/gCRThwtadt3lfBB8eG-ypg/view?website#1">
                   CONSULTER MON CV COMPLET
               </a>
-          </div>
+          </div> */}
 
       </div>
     </div>
