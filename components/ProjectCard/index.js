@@ -9,7 +9,10 @@ export default function ProjectCard({data,odd=false,color}) {
     return (
         <>
         {odd ? (
-            <div className={styles.card + " "+ (odd? styles.odd : "")}  style={{borderColor:color ? color : "var(--color-primary)",backgroundColor:color ? color : "var(--color-primary)"}}>
+        <div className={styles.card + " "+ (odd? styles.odd : "")}  style={{borderColor:color ? color : "var(--color-primary)",backgroundColor:color ? color : "var(--color-primary)"}}>
+            <div className={styles.cat} style={{backgroundColor:color ? color : "var(--color-primary)"}}>
+                {data?.cat}
+            </div>
             <Image
                 onLoad={({ target }) => {
                     const { naturalWidth, naturalHeight } = target ;
@@ -39,6 +42,9 @@ export default function ProjectCard({data,odd=false,color}) {
         </div>
         ):(
             <div className={styles.card + " "+ (odd? styles.odd : "")} >
+                <div className={styles.cat}>
+                {data?.cat}
+                </div>
                 <Image
                     onLoad={({ target }) => {
                         const { naturalWidth, naturalHeight } = target ;

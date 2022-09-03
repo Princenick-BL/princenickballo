@@ -199,7 +199,8 @@ export default function Projets() {
                   data = {{
                     url : "/images/phenix.jpg",
                     title : "A-Recruit ( Confidentiel )",
-                    desc : "Il s'agit de la création avec une équipe de developpeur, d'un logiciel embarquant plusieurs outils de travail et plusieurs fonctionnalités pour les besoins de l'entreprise."
+                    desc : "Il s'agit de la création avec une équipe de developpeur, d'un logiciel embarquant plusieurs outils de travail et plusieurs fonctionnalités pour les besoins de l'entreprise.",
+                    cat : "Professionnel"
                   }}
                 />
 
@@ -208,7 +209,8 @@ export default function Projets() {
                   data = {{
                     url : "/images/my-app.png",
                     title : "Mon site web",
-                    desc : "Il s'agit de cette page que vous consultez. Je l'ai réalisé avec le framework Next.js avec les langages comme le HTML, le CSS, le JavaScript et en utilisant les outils de photoshop."
+                    desc : "Il s'agit de cette page que vous consultez. Je l'ai réalisé avec le framework Next.js avec les langages comme le HTML, le CSS, le JavaScript et en utilisant les outils de photoshop.",
+                    cat : "Personnel"
                   }}
                 />
               
@@ -217,6 +219,7 @@ export default function Projets() {
                   odd={true}
                   color="#3da8dd"
                   data = {{
+                    cat : "Professionnel",
                     url : "/images/ga-eilco.png",
                     title : "GA-EILCO",
                     desc : "A la tête d'une équipe de développeur, il fallait developper un outil centralisé, du système de gestion des absences d'une université ."
@@ -228,6 +231,7 @@ export default function Projets() {
                   odd={true}
                   color="rgb(91, 117, 215)"
                   data = {{
+                    cat:"Personnel",
                     url : "/images/cv.png",
                     title : "Mes début avec React.js ( CV React)",
                     desc :"Prise en main de React.js avec la réalisation , d'un cv web."
@@ -236,6 +240,7 @@ export default function Projets() {
 
                 <ProjectCard
                   data = {{
+                    cat : "Personnel",
                     url : "/images/auth.png",
                     title : "Google - Facebook authentification",
                     desc :"Il est question ici d'une application"+
@@ -248,6 +253,7 @@ export default function Projets() {
                   odd={true}
                   color="blue"
                   data = {{
+                    cat : "Personnel",
                     url : "/images/covid.png",
                     title : " Gestion de cas COVID en entreprise",
                     desc :"C'est une application pour le suivi de "+
