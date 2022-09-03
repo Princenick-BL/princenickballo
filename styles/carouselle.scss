@@ -253,7 +253,8 @@
 	&__nav{
 		position: absolute;
 		bottom: 5vh;
-		right: 0;
+		right: 1rem;
+		border-radius: 5px;
 		background-color: rgba(0, 0, 0, 0.318);
 		//background-color: red;
 		display: flex;
