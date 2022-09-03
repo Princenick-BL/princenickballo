@@ -57,6 +57,7 @@ export default class caroussel extends Component {
 				
 				</div>
 				<div className="untitled__shutters"></div>
+				
 			</div>
         )
     }

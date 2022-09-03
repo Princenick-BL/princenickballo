@@ -206,6 +206,14 @@
 
 		}
 	}
+	&__slide_banner{
+		position: absolute;
+		top: 0;
+		z-index: 5;
+		width: 100vw;
+		height: 100px;
+		background-color: green;
+	}
 
 	.button{
 		font-family:'Roboto Mono', sans-serif;
