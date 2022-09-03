@@ -255,10 +255,8 @@
 		bottom: 3rem;
 		right: 0;
 		background-color: rgba(0, 0, 0, 0.318);
-		//background-color: red;
 		display: flex;
 		justify-content: center;
-		z-index: 50000;
 		ul{
 			display: flex;
 			flex-direction: column;
@@ -267,6 +265,7 @@
 			z-index: 900000;
 			justify-content: space-around;
 			padding-right: 50px;
+			width: 100%;
 			li:nth-child(1){
 				margin-top: 0;
 			}
@@ -281,8 +280,7 @@
 
                 }
 				@media screen and (max-width:500px){
-					font-size: 3vw;
-
+					font-size: 3.3vw;
                 }
 			}
 			a:hover{
