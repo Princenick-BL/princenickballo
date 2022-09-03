@@ -47,17 +47,14 @@ export default function Home() {
 
 
       <div className="index LayoutVerticalœ">
-
-        <div>
-
           <div className="one">
             <Caroussel />
-            <svg fill="transparent" preserveAspectRatio="none" viewBox="0 0 1680 40" className="banner" style={{bottom: "-1px"}}>
+            {/* <svg fill="transparent" preserveAspectRatio="none" viewBox="0 0 1680 40" className="banner" style={{bottom: "-1px"}}>
               <path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff" className='path'></path>
-            </svg>
+            </svg> */}
           </div>
 
-          <div id="ancre2" className="two center-vertical pg2">
+          {/* <div id="ancre2" className="two center-vertical pg2">
 
             <h1>CE QUE JE PEUX FAIRE</h1>
 
@@ -384,9 +381,7 @@ export default function Home() {
               <a className="btn" href="https://www.canva.com/design/DAEmEjXbW4o/gCRThwtadt3lfBB8eG-ypg/view?website#1">
                   CONSULTER MON CV COMPLET
               </a>
-          </div>
-
-        </div>
+          </div> */}
 
       </div>
 

@@ -26,11 +26,6 @@ export default class caroussel extends Component {
 									<span>&#9733;</span>
 								</div>
 							</div>
-							<Link href="#ancre2">
-								<a>
-									<div className="arrow"></div>						
-								</a>
-							</Link>
 							</div>
 						</div>
 						<div className="untitled__slide">
@@ -41,11 +36,7 @@ export default class caroussel extends Component {
 								<span>CRÉATION DE SITES WEB</span> 
 								<p>Sites vitrines, logiciels WEB, sites évennementiels</p>
 							</div>
-							<Link href="#ancre2">
-								<a>
-									<div className="arrow"></div>						
-								</a>
-							</Link>
+							
 
 							</div>
 						</div>
@@ -57,18 +48,27 @@ export default class caroussel extends Component {
 
 									<div className="emojis"> 😉 😉 😉</div>
 								</div>
-								<Link href="#ancre2">
-									<a>
-										<div className="arrow"></div>						
-									</a>
-								</Link>	
+								
 							</div>
 						</div>
 					
 					</div>
-					<div className="untitled__shutters"></div>
 					
 				</div>
+				<nav className="untitled__nav">
+					<ul>
+						<li>
+							<Link href='/who'>
+								<a >MOI</a>
+							</Link>
+						</li>
+						<li>
+							<Link href='/projects'>
+								<a>MES PROJETS</a>
+							</Link>
+						</li>
+					</ul>
+				</nav>
 			</div>
         )
     }
