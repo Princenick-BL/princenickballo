@@ -253,20 +253,26 @@
 	&__nav{
 		position: absolute;
 		bottom: 3rem;
+		right: 0;
 		background-color: rgba(0, 0, 0, 0.318);
 		//background-color: red;
-		width: 100%;
 		display: flex;
 		justify-content: center;
 		z-index: 50000;
 		ul{
 			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
 			list-style-type: none;
 			z-index: 900000;
 			justify-content: space-around;
-			width: 100%;
-			max-width: 300px;
 			padding-right: 50px;
+			li:nth-child(1){
+				margin-top: 0;
+			}
+			li{
+				margin-top: 1rem;
+			}
 			a{
 				color: #fff;
 				font-size: 1vw;
