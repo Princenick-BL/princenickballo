@@ -1,10 +1,8 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
-import Domaines from '../components/utills/domaines/domaines'
 import Caroussel from '../components/caroussel'
 import Image from 'next/image'
 import Link from 'next/link'
-import Popup from '../components/utills/popup/popup'
 
 
 export default function Home() {

@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './index.module.scss'
+import Domaines from '../components/utills/domaines/domaines'
+import Popup from '../components/utills/popup/popup'
 
 export default function Projets() {
 
