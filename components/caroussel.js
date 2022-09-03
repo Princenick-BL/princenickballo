@@ -7,10 +7,8 @@ export default class caroussel extends Component {
         return (
             <div style={{display:"flex"}}>
 				<MediaLeft />
-				<div className="untitled">
+				{/* <div className="untitled">
 					
-					{/* <div className="info">Ce site web à été  réalisé par mes soins avec Next.js</div> */}
-
 					<div className="untitled__slides">
 						<div className="untitled__slide">
 							<div className="untitled__slideBg"></div>
@@ -68,7 +66,7 @@ export default class caroussel extends Component {
 							</Link>
 						</li>
 					</ul>
-				</nav>
+				</nav> */}
 			</div>
         )
     }
