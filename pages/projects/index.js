@@ -214,6 +214,8 @@ export default function Projets() {
               
               
                 <ProjectCard
+                  odd={true}
+                  color="#3da8dd"
                   data = {{
                     url : "/images/ga-eilco.png",
                     title : "GA-EILCO",
@@ -224,6 +226,7 @@ export default function Projets() {
 
                 <ProjectCard
                   odd={true}
+                  color="rgb(91, 117, 215)"
                   data = {{
                     url : "/images/cv.png",
                     title : "Mes début avec React.js ( CV React)",
@@ -243,6 +246,7 @@ export default function Projets() {
 
                 <ProjectCard
                   odd={true}
+                  color="blue"
                   data = {{
                     url : "/images/covid.png",
                     title : " Gestion de cas COVID en entreprise",
