@@ -11,6 +11,9 @@
             position: absolute;
             z-index: 4;
             bottom: 0;
+            .path{
+                border-top: 1px solid green;
+            }
         }
     }
 

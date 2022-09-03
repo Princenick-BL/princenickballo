@@ -4,6 +4,7 @@
 	
 	width: 100vw;
 	height: 100vh;
+	padding-left: 50px;
 	overflow: hidden;
 	$t: 2.5s;
 	$e1: cubic-bezier(0.8, 0.00, 0.1, 1);
@@ -96,7 +97,6 @@
 	}
 	
 	&__slides{
-		position: absolute;
 		height: 100%;
 		width: 100%;
 		top: 0;
@@ -169,7 +169,6 @@
 		color: #ffffff;
 		font-family: $font;
 		line-height: 0.8;
-		letter-spacing: -0.025em;
 		z-index: 2;
 		opacity: 1;
 		background-color: rgba(0, 0, 0, 0.322);
@@ -180,27 +179,29 @@
 			font-size: 5vmin;
 			font-weight: bold;
 			line-height: 2;
-			width: 100%;
-			margin: 0 auto;
+			width: calc(100% - 50px );
 		}
 		
 		div{
 			display: flex;
 			width: 200px;
-			margin: 2em auto;
+			margin-top: 2em;
 			color: yellow;
+			width: calc(100% - 50px );
+
 		}
 
 		p{
-			margin: 2em auto;
+			margin-top: 2em;
 			text-align: center;
 			font-weight: bold;
 			line-height: 3;
+			width: calc(100% - 50px );
 		}
 		.emojis{
 			background-blend-mode:inherit;
 			color: #fff;
-			width: 100%;
+			width: calc( 100% - 50px );
 			text-align: center;
 			justify-content: center;
 
@@ -259,7 +260,7 @@
 	.arrow{
 		width: 40px;
 		height: 40px;
-		margin: -20px 0 0 -20px;
+		margin: -20px 0 0 -50px;
 		-webkit-transform: rotate(45deg);
 		border-left: none;
 		border-top: none;

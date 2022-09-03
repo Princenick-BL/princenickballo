@@ -53,7 +53,7 @@ export default function Home() {
           <div className="one">
             <Caroussel />
             <svg fill="transparent" preserveAspectRatio="none" viewBox="0 0 1680 40" className="banner" style={{bottom: "-1px"}}>
-              <path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff"></path>
+              <path d="M0 40h1680V30S1340 0 840 0 0 30 0 30z" fill="#fff" className='path'></path>
             </svg>
           </div>
 
