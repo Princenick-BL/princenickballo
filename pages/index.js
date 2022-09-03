@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import Head from 'next/head'
-import MediaLeft from '../components/utills/media.left/media.left'
 import Domaines from '../components/utills/domaines/domaines'
 import Caroussel from '../components/caroussel'
 import Image from 'next/image'
@@ -49,9 +48,7 @@ export default function Home() {
 
       <div className="index LayoutVerticalœ">
 
-        <MediaLeft />
-
-        <div className="ml50">
+        <div>
 
           <div className="one">
             <Caroussel />
