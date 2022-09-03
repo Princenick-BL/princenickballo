@@ -223,6 +223,7 @@ export default function Projets() {
            
 
                 <ProjectCard
+                  odd={true}
                   data = {{
                     url : "/images/cv.png",
                     title : "Mes début avec React.js ( CV React)",
@@ -241,6 +242,7 @@ export default function Projets() {
                 />
 
                 <ProjectCard
+                  odd={true}
                   data = {{
                     url : "/images/covid.png",
                     title : " Gestion de cas COVID en entreprise",
