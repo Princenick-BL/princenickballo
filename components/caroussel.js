@@ -15,6 +15,8 @@ export default class caroussel extends Component {
 						<div className="untitled__slide">
 							<div className="untitled__slideBg"></div>
 							<div className="untitled__slideContent">
+							<div className="untitled__slideContent_content">
+
 								<span>ELÈVE INGENIEUR EN INFORMATIQUE </span> 
 								<div>
 									<span>&#9733;</span>
@@ -23,32 +25,38 @@ export default class caroussel extends Component {
 									<span>&#9733;</span>
 									<span>&#9733;</span>
 								</div>
-								<Link href="#ancre2">
-									<a>
-										<div className="arrow"></div>						
-									</a>
-								</Link>
+							</div>
+							<Link href="#ancre2">
+								<a>
+									<div className="arrow"></div>						
+								</a>
+							</Link>
 							</div>
 						</div>
 						<div className="untitled__slide">
 							<div className="untitled__slideBg"></div>
 							<div className="untitled__slideContent">
-								
+							<div className="untitled__slideContent_content">
+
 								<span>CRÉATION DE SITES WEB</span> 
 								<p>Sites vitrines, logiciels WEB, sites évennementiels</p>
-								<Link href="#ancre2">
-									<a>
-										<div className="arrow"></div>						
-									</a>
-								</Link>
+							</div>
+							<Link href="#ancre2">
+								<a>
+									<div className="arrow"></div>						
+								</a>
+							</Link>
 
 							</div>
 						</div>
 						<div className="untitled__slide">
 							<div className="untitled__slideBg"></div>
 							<div className="untitled__slideContent">
-								<span>ENSEMBLE, DONNONS VIE À VOS RÊVES</span> 
-								<div className="emojis"> 😉 😉 😉</div>
+								<div className="untitled__slideContent_content">
+									<span>ENSEMBLE, DONNONS VIE À VOS RÊVES</span> 
+
+									<div className="emojis"> 😉 😉 😉</div>
+								</div>
 								<Link href="#ancre2">
 									<a>
 										<div className="arrow"></div>						
