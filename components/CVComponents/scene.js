@@ -77,4 +77,12 @@ export const Ball = () => {
   );
 };
 
+export const Navigation = () =>{
+  return(
+    <div>
+      
+    </div>
+  )
+}
+
 
