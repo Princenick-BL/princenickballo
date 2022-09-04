@@ -1,4 +1,7 @@
 import React from "react";
+import styles from './index.module.scss'
+import { IoIosArrowUp,IoIosArrowDown } from 'react-icons/io';
+
 
 export const Ground = () => {
   return (
@@ -79,8 +82,13 @@ export const Ball = () => {
 
 export const Navigation = () =>{
   return(
-    <div>
-      
+    <div className={styles.navigation}>
+      <div>
+        <IoIosArrowUp/>
+      </div>
+      <div>
+        <IoIosArrowDown/>
+      </div>
     </div>
   )
 }

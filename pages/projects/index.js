@@ -1,12 +1,12 @@
 import React,{useState} from 'react'
 import Link from 'next/link';
+import { FaHome } from 'react-icons/fa';
 import Head from 'next/head';
 import styles from './index.module.scss'
 import Domaines from '../../components/utills/domaines/domaines'
 import Popup from '../../components/utills/popup/popup'
 import Image from 'next/image';
 import ProjectCard from '../../components/ProjectCard';
-import { FaHome } from 'react-icons/fa';
 export default function Projets() {
 
   const [show_auth,setShowAuth]=useState(false)
