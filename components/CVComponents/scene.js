@@ -3,7 +3,7 @@ import React from "react";
 export const Ground = () => {
   return (
     <mesh position={[0, 0, 0]} rotation={[-Math.PI * 0.5, 0, 0]} receiveShadow>
-      <planeGeometry attach="geometry" args={[200, 500]} />
+      <planeGeometry attach="geometry" args={[500, 500]} />
       <meshStandardMaterial color={"#ddddff"} />
     </mesh>
   );
@@ -13,15 +13,15 @@ export const Wall = () => {
   return (
     <>
       <mesh 
-        position={[0, 25, -250]} 
+        position={[0, 100, -250]} 
         castShadow 
         receiveShadow
       >
-        <boxGeometry args={[200, 200, 1]} />
+        <boxGeometry args={[500, 200, 1]} />
         <meshLambertMaterial color={"white"} />
       </mesh>
       <mesh
-        position={[-100, 25, 0]}
+        position={[-250, 100, 0]}
         rotation={[0, -Math.PI * 0.5, 0]}
         castShadow
         receiveShadow
@@ -30,15 +30,15 @@ export const Wall = () => {
         <meshLambertMaterial color={"white"} />
       </mesh>
       <mesh 
-        position={[0, 25, 250]} 
+        position={[0, 100, 250]} 
         castShadow 
         receiveShadow
       >
-        <boxGeometry args={[200, 200, 1]} />
+        <boxGeometry args={[500, 200, 1]} />
         <meshLambertMaterial color={"white"} />
       </mesh>
       <mesh
-        position={[100, 25, 0]}
+        position={[250, 100, 0]}
         rotation={[0, -Math.PI * 0.5, 0]}
         castShadow
         receiveShadow
