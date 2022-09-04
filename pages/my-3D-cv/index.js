@@ -1,9 +1,10 @@
 import * as THREE from "three";
+import Link from 'next/link'
 import React, { useEffect, useRef, useState } from "react";
-import ReactDOM from "react-dom";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Stats, OrbitControls } from "@react-three/drei";
-import styles from "./index.module.scss";
+import { FaHome } from 'react-icons/fa';
+
 
 import { SmallBox, Wall, Box, Ball, Ground } from "../../components/CVComponents/scene";
 
@@ -38,19 +39,26 @@ function DynamicResolution({ min = 0.1, max = 1, step = 0.1 }) {
 
 const App = () => {
   return (
-    <Canvas
-      style={{ height: "100vh", width: "100vw" }}
-      camera={{ position: [10, 10, 10] }}
-    >
-      <pointLight position={[15, 15, 15]} />
-      <SmallBox />
-      <Box />
-      <Ball />
-      <Wall />
-      <Ground />
-      <DynamicResolution min={0.25} max={1} step={0.1} />
-      <Stats />
-    </Canvas>
+    <>
+        <Link href={"/"} >
+            <a style={{position:"absolute",right:"1rem",top:"1rem",zIndex:"30"}}>
+                <FaHome fontSize={24} />
+            </a>
+        </Link>
+        <Canvas
+            style={{ height: "100vh", width: "100vw" }}
+            camera={{ position: [10, 10, 10] }}
+        >
+            <pointLight position={[15, 15, 15]} />
+            <SmallBox />
+            <Box />
+            <Ball />
+            <Wall />
+            <Ground />
+            <DynamicResolution min={0.25} max={1} step={0.1} />
+            <Stats />
+        </Canvas>
+    </>
   );
 };
 
