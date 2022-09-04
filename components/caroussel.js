@@ -66,7 +66,7 @@ export default class caroussel extends Component {
 							</Link>
 						</li>
 						<li>
-							<Link href='/who'>
+							<Link href='/my-3D-cv'>
 								<a >MOI</a>
 							</Link>
 						</li>
