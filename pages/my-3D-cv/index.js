@@ -5,7 +5,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Stats, OrbitControls } from "@react-three/drei";
 import styles from "./index.module.scss";
 
-import { SmallBox, Wall, Box, Ball, Ground } from "./scene";
+import { SmallBox, Wall, Box, Ball, Ground } from "../../components/CVComponents/scene";
 
 function DynamicResolution({ min = 0.1, max = 1, step = 0.1 }) {
   const { gl } = useThree();
