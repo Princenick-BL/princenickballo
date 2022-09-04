@@ -34,7 +34,7 @@ function DynamicResolution({ min = 0.1, max = 1, step = 0.1 }) {
     }
   });
 
-  return <OrbitControls ref={orbitRef} />;
+  return <OrbitControls ref={orbitRef} maxPolarAngle={Math.PI / 2} enablePan={false} enableZoom={false}/>;
 }
 
 const App = () => {
@@ -47,7 +47,7 @@ const App = () => {
         </Link>
         <Canvas
             style={{ height: "100vh", width: "100vw" }}
-            camera={{ position: [10, 10, 10] }}
+            camera={{ position: [1, 5, 30] }}
         >
             <pointLight position={[15, 15, 15]} />
             <SmallBox />

@@ -52,7 +52,7 @@ export const SmallBox = () => {
 
 export const Ball = () => {
   return (
-    <mesh position={[1, 6, -1]} castShadow receiveShadow>
+    <mesh position={[1, 6, -1]} castShadow receiveShadow >
       <sphereGeometry args={[1, 128, 128]} />
       <meshLambertMaterial color={"yellow"} />
     </mesh>
