@@ -80,13 +80,13 @@ export const Ball = () => {
   );
 };
 
-export const Navigation = ({next}) =>{
+export const Navigation = ({next,prev}) =>{
   return(
     <div className={styles.navigation}>
       <div onClick={next}>
         <IoIosArrowUp/>
       </div>
-      <div>
+      <div onClick={prev}>
         <IoIosArrowDown/>
       </div>
     </div>

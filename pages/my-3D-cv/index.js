@@ -15,13 +15,22 @@ export default function App() {
 
     const [ratio,setRatio] = useState(130)
 
-    const [position,setPosition] = useState(0)
+    const [position,setPosition] = useState(-1)
 
     const next = ()=>{
-        setPosition(position++)
+        if(position < 9){
+
+            setPosition(position + 1)
+            return
+        }
+        setPosition(0)
     }
     const prev = ()=>{
-        setPosition(position--)
+        if(position > 0){
+            setPosition(position - 1)
+            return 
+        }
+        setPosition(9)
     }
 
     const pexel = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`
@@ -106,7 +115,7 @@ export default function App() {
         },[])
 
         useEffect(()=>{
-            if(pos && pos !=true && childrens){
+            if(pos && pos !=-1 && childrens){
                 console.log("Pos updated",pos,ref.current.children)
                 setLocation('/my-3D-cv/item/' + childrens[pos])
                 clicked.current = ref.current.getObjectByName(params?.id)
