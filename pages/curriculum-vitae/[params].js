@@ -99,7 +99,7 @@ export default function App() {
     function Frames({ images, q = new THREE.Quaternion(), p = new THREE.Vector3() ,pos}) {
         const ref = useRef()
         const clicked = useRef()
-        const [, params] = useRoute('/my-3D-cv/item/:id')
+        const [, params] = useRoute('/curriculum-vitae/read/info/:id')
         const [, setLocation] = useLocation()
         const [childrens,setChildren]=useState([])
 
@@ -115,14 +115,12 @@ export default function App() {
         },[])
 
         useEffect(()=>{
-            console.log(pos)
             if(pos && pos !=-1 && childrens && childrens[pos]){
-                console.log("Pos updated",pos,ref.current.children)
-                setLocation('/my-3D-cv/item/' + childrens[pos])
+                setLocation('/curriculum-vitae/read/info/' + childrens[pos])
                 clicked.current = ref.current.getObjectByName(params?.id)
                 return
             }
-            setLocation('/my-3D-cv/item')
+            setLocation('/curriculum-vitae/read/info')
         },[pos])
 
 
@@ -147,8 +145,8 @@ export default function App() {
             ref={ref}
             // onUpdate={(e)=>{updateChildren(e.children)}}
             onUpdate={updateChildren}
-            onClick={(e) => (e.stopPropagation(), setLocation(clicked.current === e.object ? '/my-3D-cv/item' : '/my-3D-cv/item/' + e.object.name))}
-            onPointerMissed={() => setLocation('/my-3D-cv/item')}>
+            onClick={(e) => (e.stopPropagation(), setLocation(clicked.current === e.object ? '/curriculum-vitae/read/info' : '/curriculum-vitae/read/info/' + e.object.name))}
+            onPointerMissed={() => setLocation('/curriculum-vitae/read/info')}>
             {images.map((props) => <Frame key={props.url} {...props} /> /* prettier-ignore */)}
             </group>
         )
