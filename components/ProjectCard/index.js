@@ -32,7 +32,7 @@ export default function ProjectCard({data,odd=false,color}) {
                 <div className={styles.cnt}  style={{borderColor:color ? color : "var(--color-primary)",backgroundColor:color ? color : "var(--color-primary)"}}> 
                     <p>{data?.title}</p>
                 
-                    <p>
+                    <p style={{ lineHeight: 1.5 }}>
                         {data?.desc}
                     </p>
                 </div>
@@ -65,7 +65,7 @@ export default function ProjectCard({data,odd=false,color}) {
                     <div className={styles.cnt}> 
                         <p>{data?.title}</p>
                     
-                        <p>
+                        <p style={{ lineHeight: 1.5 }}>
                             {data?.desc}
                         </p>
                     </div>

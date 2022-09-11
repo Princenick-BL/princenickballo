@@ -1,0 +1,165 @@
+.main{
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 70px auto;
+    padding-top: .5rem;
+    min-height: 800px;
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    .h3Title{
+        color: var(--color-primary);
+    }
+    .editorial{
+        display: flex;
+        height: 70vh;
+        min-height: 500px;
+        .mainSlideShow{
+            height: 100%;
+            width: 48%;
+            min-width: 48%;
+            max-width: 48%;
+            position: relative;
+            
+        }
+        .slide,.topArticlesArticle{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 5px;
+
+            .img {
+                object-fit: cover;
+                cursor: zoom-in;
+                transition: all 0.5s ease;
+            }
+
+            &::after {
+                align-items: center;
+                background: rgba(black, 0.5);
+                color: white;
+                content: 'read more';
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                opacity: 0;
+                position: absolute;
+                transition: all 0.5s ease;
+                width: 100%;
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+
+                .img {
+                    transform: scale(1.3);
+                }
+            }
+
+        }
+        .mark_down {
+            background-image: url("../../public/images/down_gradient.png");
+            width: calc(100% - 2rem);
+            position: absolute;
+            bottom: -9px;
+            padding: 1rem;
+            padding-bottom: 3rem;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .cat {
+                background-color: var(--color-primary);
+                width: max-content;
+                color: #fff;
+                padding: 1rem;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            p {
+                color: #fff;
+                font-size: 30px;
+                line-height: 1.3;
+                font-weight: 700;
+                width: 100%;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                line-height: 1.5 !important;
+                margin: 0 !important;
+            }
+        }
+        .topArticles,.mainPlayer{
+            height: 100%;
+            width: 25%;
+            min-width: 25%;
+            max-width: 25%;
+        }
+        .topArticles{     
+            margin-left: .5rem;
+            position: relative;
+            overflow: hidden;
+            .arrows {
+                position: absolute;
+                right: 0;
+                top: 0px;
+                background-color: #f3f3f3;
+                display: flex;
+                z-index: 20;
+                .arrow {
+                    background-color: #fff;
+                    width: 25px;
+                    height: 25px;
+                    margin: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                }
+            }
+            .topArticlesArticle{
+                height: 200px;
+                margin-bottom: 2rem;
+                .cat {
+                    font-size: .7rem;
+                }
+                p{
+                    font-size: 14px;
+                }
+                
+            }
+            .mark_down{
+                padding-bottom: 2rem;
+            }
+        }
+        .mainPlayer{
+            width: calc(27% - 2rem);
+            min-width: calc(27% - 2rem);
+            max-width: calc(27% - 2rem );
+            overflow: hidden;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            amp-story-player{
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+   
+}

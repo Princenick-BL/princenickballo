@@ -1,9 +1,6 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Head from 'next/head'
 import Caroussel from '../components/caroussel'
-import Image from 'next/image'
-import Link from 'next/link'
-
 
 export default function Home() {
 
@@ -21,7 +18,7 @@ export default function Home() {
           /* Lien font googlr */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" as="style" type="text/css" crossOrigin="anonymous"/>
 
         {/* <!-- Facebook Meta Tags --> */}
         <meta property="og:url" content="https://princenickballo.fr" />

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+  height: 100%;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ccc;
+
+}
+::-webkit-scrollbar{
+    width: 2px;
+    background-color: #F5F5F5;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+
+}
+
+:root {
+	--theme-light : #ffffff;
+	--theme-dark : #262626;
+	--theme-text-light : #000;
+	--theme-text-dark : #ccc;
+	--nc-header-shadow : rgba(60,64,67,0.3);
+	--color-primary-light : #253022;
+	--color-secondary-light : #fff;
+	--text-color-primary : #2C2D31;
+	--color1: rgba(7,155,238,1);
+	--color2: rgba(8,41,190,1);
+	--color3: rgb(150, 9, 150);
+	--color-primary: brown;
+}
+
+
+
