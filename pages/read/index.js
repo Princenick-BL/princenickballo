@@ -149,33 +149,33 @@ export default function ReadIndex() {
                 </amp-story-player>
             </div>
           </div>
-            <div class="viewport">
-              <div class="entry-point-container">
+            <div className="viewport">
+              <div className="entry-point-container">
                 <h1> Web Stories </h1>
-                <div class="circular-entry-point">
-                  <div class="entry-points">
-                    <div class="entry-point-card-container">
+                <div className="circular-entry-point">
+                  <div className="entry-points">
+                    <div className="entry-point-card-container">
                       <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#FF6F32"}}/>
                       <div>
-                        <span class="entry-point-card-title">Q&A with ZOE Newman</span>
+                        <span className="entry-point-card-title">Q&A with ZOE Newman</span>
                       </div>
                     </div>
-                    <div class="entry-point-card-container">
+                    <div className="entry-point-card-container">
                       <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#E6AD1C" }} />
                       <div>
-                        <span class="entry-point-card-title">24 Hours in New York City</span>
+                        <span className="entry-point-card-title">24 Hours in New York City</span>
                       </div>
                     </div>
-                    <div class="entry-point-card-container">
+                    <div className="entry-point-card-container">
                       <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#466FFF" }}/>
                       <div>
-                        <span class="entry-point-card-title">The Next King of the Sea</span>
+                        <span className="entry-point-card-title">The Next King of the Sea</span>
                       </div>
                     </div>
-                    <div class="entry-point-card-container">
+                    <div className="entry-point-card-container">
                       <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#4CA47C" }} />
                       <div>
-                        <span class="entry-point-card-title">Spark a Passion for Reading</span>
+                        <span className="entry-point-card-title">Spark a Passion for Reading</span>
                       </div>
                     </div>
                   </div>
@@ -183,8 +183,8 @@ export default function ReadIndex() {
               </div>
               <br></br>
 
-              <div class="lightbox">
-                <amp-story-player class="my-player">
+              <div className="lightbox">
+                <amp-story-player className="my-player">
                   <script type="application/json">
                     {`{
                       "behavior": {
