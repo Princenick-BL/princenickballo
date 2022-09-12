@@ -1,13 +1,13 @@
 import React,{useState,useEffect,Suspense}  from 'react'
 import Head from 'next/head'
-import styles from '../../../styles/Home.module.scss'
-import ArticlePreview from '../../../components/ArticlePreview'
-import { getArticle } from '../../../services/articles'
-import {HomeMenu as Menu} from '../../../components/Menu'
-import Loading from '../../../Loading'
+import styles from '../../../../styles/Home.module.scss'
+import ArticlePreview from '../../../../components/ArticlePreview'
+import { getArticle } from '../../../../services/articles'
+import {HomeMenu as Menu} from '../../../../components/Menu'
+import Loading from '../../../../Loading'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
-import * as gtag from '../../../lib/gtag'
+import * as gtag from '../../../../lib/gtag'
 
 export default function Articles({articles}) {
 
