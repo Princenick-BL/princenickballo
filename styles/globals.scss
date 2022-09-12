@@ -75,7 +75,7 @@ body {
 }
 
 .lightbox.show {
-	position: absolute;
+	position: fixed;
 	visibility: visible;
 	z-index: 99999;
 	opacity: 1;

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import Head from 'next/head'
 import {HomeMenu} from '../../components/Menu'
 import styles from './index.module.scss'
@@ -6,44 +6,59 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FaSortDown,FaSortUp } from 'react-icons/fa';
 import Slideshow from '../../components/SlideShow'
+import dynamic from "next/dynamic";
 
-export default function ReadIndex() {
+
+
+function ReadIndex() {
+
+  const [mounted,setMounted] = useState(false)
+  const player = null
+
+  useEffect(()=>{
+    setMounted(true)
+  },['init'])
+
   useEffect(()=>{
 
-    const player = document.body.querySelectorAll("amp-story-player")[1];
-    const lightboxEl = document.querySelector(".lightbox");
-  
-    if (player.isReady) {
-      initializeCarousel();
-    } else {
-      player.addEventListener("ready", () => {
+    const player = document.getElementById("player2");
+    
+    if(player){
+      const lightboxEl = document.querySelector(".lightbox");
+    
+      if (player.isReady) {
         initializeCarousel();
-      });
-    }
-  
-    function initializeCarousel() {
-      const stories = player.getStories();
-  
-      const thumbnails = document.querySelectorAll(
-        ".entry-point-card-container .img"
-      );
-
-      console.log("OKKK", thumbnails)
-  
-      thumbnails.forEach((img, idx) => {
-        img.addEventListener("click", () => {
-          player.show(stories[idx].href);
-          player.play();
-          lightboxEl.classList.toggle("show");
+      } else {
+        player.addEventListener("ready", () => {
+          initializeCarousel();
         });
+      }
+    
+      function initializeCarousel() {
+        const stories = player.getStories();
+    
+        const thumbnails = document.querySelectorAll(
+          ".entry-point-card-container .img"
+        );
+  
+        console.log("OKKK", thumbnails)
+    
+        thumbnails.forEach((img, idx) => {
+          img.addEventListener("click", () => {
+            console.log("CLickk")
+            player.show(stories[idx].href);
+            player.play();
+            lightboxEl.classList.toggle("show");
+          });
+        });
+      }
+    
+      player.addEventListener("amp-story-player-close", () => {
+        player.pause();
+        lightboxEl.classList.toggle("show");
       });
     }
-  
-    player.addEventListener("amp-story-player-close", () => {
-      player.pause();
-      lightboxEl.classList.toggle("show");
-    });
-  })
+  },[mounted])
 
   return (
     <>
@@ -52,7 +67,6 @@ export default function ReadIndex() {
           async
           src="https://cdn.ampproject.org/amp-story-player-v0.js"
         ></script>
-        <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
         <link
           href="https://cdn.ampproject.org/amp-story-player-v0.css"
           rel="stylesheet"
@@ -133,7 +147,7 @@ export default function ReadIndex() {
               </Link>
             </div>
             <div className={styles.mainPlayer}>
-                <amp-story-player layout="fill" width="360" height="600" amp-cache="cdn.ampproject.org">
+                {/* <amp-story-player layout="fill" width="360" height="600" amp-cache="cdn.ampproject.org">
                   <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
                     <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img/>
                       Stories in AMP - Hello World
@@ -146,7 +160,7 @@ export default function ReadIndex() {
                     <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img />
                     Stories in AMP - Hello World
                   </a>
-                </amp-story-player>
+                </amp-story-player> */}
             </div>
           </div>
             <div className="viewport">
@@ -184,7 +198,8 @@ export default function ReadIndex() {
               <br></br>
 
               <div className="lightbox">
-                <amp-story-player className="my-player">
+              {mounted &&
+              <amp-story-player className="my-player" id="player2">
                   <script type="application/json">
                     {`{
                       "behavior": {
@@ -203,6 +218,7 @@ export default function ReadIndex() {
                   <a href="https://wsdemos.uc.r.appspot.com/ampfest/s3"></a>
                   <a href="https://wsdemos.uc.r.appspot.com/ampfest/s4"></a>
                 </amp-story-player>
+              }
               </div>
             </div>
         </main>
@@ -210,3 +226,8 @@ export default function ReadIndex() {
     </>
   )
 }
+// export default dynamic(() => Promise.resolve(ReadIndex), {
+//   ssr: false,
+// });
+
+export default ReadIndex
