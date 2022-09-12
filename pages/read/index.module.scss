@@ -16,7 +16,6 @@
     .editorial{
         display: flex;
         height: 70vh;
-        min-height: 500px;
         @media only screen and (max-width: 500px) {
             flex-direction: column;
             height: 100%;
@@ -41,7 +40,8 @@
                 }
             }
         }
-                            
+        
+        
         .slide,.topArticlesArticle{
             position: relative;
             width: 100%;
@@ -180,13 +180,7 @@
             justify-content: center;
             align-items: center;
             @media only screen and (max-width: 500px) {
-                width: 100%;
-                min-width: 100%;
-                max-width: 100%;
-                height: calc(100vw * 16 / 9 );
-                padding: 0;
-                margin-top: 1rem ;
-                margin-bottom:  1rem;
+               display: none;
             }
             amp-story-player{
                 border-radius: 10px;
