@@ -10,6 +10,10 @@
         padding: 0;
         margin: 0;
     }
+    h3{
+        margin: .5rem auto;
+        text-align: center;
+    }
     .h3Title{
         color: var(--color-primary);
     }
@@ -26,6 +30,8 @@
             min-width: 48%;
             max-width: 48%;
             position: relative;
+            border-radius: 5px;
+            overflow: hidden;
             @media only screen and (max-width: 500px) {
                 width: 100%;
                 min-width: 100%;

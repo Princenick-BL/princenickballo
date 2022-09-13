@@ -91,6 +91,27 @@ amp-story-player.my-player {
 	display: flex;
 	padding-bottom: 10px;
 	justify-content: space-between;
+	overflow-x: scroll;
+}
+/* width */
+.entry-points::-webkit-scrollbar {
+width: 0px;
+height: 0px;
+}
+
+/* Track */
+.entry-points::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+.entry-points::-webkit-scrollbar-thumb {
+background: #888;
+}
+
+/* Handle on hover */
+.entry-points::-webkit-scrollbar-thumb:hover {
+background: #555;
 }
 
 .circular-entry-point .img {
