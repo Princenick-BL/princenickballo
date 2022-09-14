@@ -4,10 +4,7 @@ import {HomeMenu} from '../../components/Menu'
 import styles from './index.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaSortDown,FaSortUp } from 'react-icons/fa';
-import Slideshow from '../../components/SlideShow'
-import dynamic from "next/dynamic";
-import Script from 'next/script'
+import Ads300 from '../../components/Ads/Ads300'
 
 
 const Slide = () =>{
@@ -27,7 +24,7 @@ const Slide = () =>{
                         />
                         <div className={styles.mark_down}>
                             <h5 className={styles.cat}>Catérorie</h5>
-                            <span>No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.</span>
+                            <span className={styles.desc}>No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.</span>
                         </div>
 
                         <div className={styles.publisher}>
@@ -108,6 +105,7 @@ function ReadIndex() {
   useAmpStoryPlayer(loadPlayer(playerRef),mounted)
 
   useEffect(()=>{
+    const player1 = document.getElementById("player1");
     const player = document.getElementById("player2");
     const lightboxEl = document.querySelector(".lightbox");
     async function initializeWidget(idx) {
@@ -151,28 +149,31 @@ function ReadIndex() {
                 <Slide/>
 
             </div>
-            <div className={styles.mainPlayer}>
-              {/* {mounted &&
-              ( */}
-                <amp-story-player layout="fill" width="360" height="600" amp-cache="cdn.ampproject.org" id="player1">
-                  <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
-                    <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img/>
+            <div className={styles.right}>
+              <div className={styles.mainPlayer}>
+                {/* {mounted &&
+                ( */}
+                  <amp-story-player layout="fill" width="360" height="600" amp-cache="cdn.ampproject.org" id="player1">
+                    <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
+                      <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img/>
+                        Stories in AMP - Hello World
+                    </a>
+                    <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
+                      <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img />
                       Stories in AMP - Hello World
-                  </a>
-                  <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
-                    <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img />
-                    Stories in AMP - Hello World
-                  </a>
-                  <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
-                    <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img />
-                    Stories in AMP - Hello World
-                  </a>
-                </amp-story-player>
+                    </a>
+                    <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
+                      <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img />
+                      Stories in AMP - Hello World
+                    </a>
+                  </amp-story-player>
 
-              {/* )} */}
+                {/* )} */}
+              </div>
+              <Ads300/>
             </div>
           </div>
-          <div className="viewport">
+          {/* <div className="viewport">
             <div className="entry-point-container">
               <h1> Web Stories </h1>
               <div className="circular-entry-point">
@@ -211,8 +212,7 @@ function ReadIndex() {
             <br></br>
 
             <div className="lightbox">
-            {mounted &&
-              <amp-story-player className="my-player" id="player2" ref={playerRef} amp-cache="cdn.ampproject.org">
+              <amp-story-player className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
                 <script type="application/json">
                   {`{
                     "behavior": {
@@ -231,9 +231,8 @@ function ReadIndex() {
                 <a href="https://wsdemos.uc.r.appspot.com/ampfest/s3"></a>
                 <a href="https://wsdemos.uc.r.appspot.com/ampfest/s4"></a>
               </amp-story-player>
-            }
             </div>
-          </div>
+          </div> */}
           <div>
             <section></section>
             <aside></aside>
