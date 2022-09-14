@@ -20,15 +20,25 @@ const Slide = () =>{
                     <div className={styles.slider}>
                         <Image
                             src={"https://picsum.photos/500/400"}
-                            width="450"
-                            height="300"
-                            layout="fill"
-                            style={{ width: "100%", height: "100%" }}
-                            className="img"
+                            width="400"
+                            height="200"
+                            layout="responsive"
+                            className={styles.img}
                         />
                         <div className={styles.mark_down}>
                             <h5 className={styles.cat}>Catérorie</h5>
                             <span>No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.</span>
+                        </div>
+
+                        <div className={styles.publisher}>
+                          <Image
+                              src={"https://picsum.photos/500/400"}
+                              width="40"
+                              height="40"
+                              layout="fixed"
+                              className={styles.publisher_logo}
+                          />
+                          <div className={styles.name}>Published by <strong>Prince Nick Ballo</strong> on Sep,14,2022</div>
                         </div>
                     </div>
                 </a>
