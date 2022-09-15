@@ -12,7 +12,7 @@ export default function Logo({single,style}) {
       {single ? (
         <div className={styles.logo} style={style}>{`D`}</div>
       ) : (
-        <div className={styles.logo} style={style}>{`Discoverai`}</div>
+        <div className={styles.logo} style={style}>{`DiscoverAI`}</div>
       )}
     </>
   )
