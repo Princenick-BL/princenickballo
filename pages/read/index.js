@@ -6,6 +6,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Ads300 from '../../components/Ads/Ads300'
 import Logo from '../../components/Logo'
+import StoryPlayerWidget from '../../components/StoryPlayerWidget'
+
 
 const Slide = () =>{
   return(
@@ -65,7 +67,7 @@ function getAmpCss() {
   return ampCSS;
 }
 
-const useAmpStoryPlayer = (callback,dep) => {
+const useAmpStoryPlayer = (callback) => {
   useEffect(() => {
     console.log("useAmpStoryPlayer");
     const ampScript = document.querySelector(
@@ -75,62 +77,22 @@ const useAmpStoryPlayer = (callback,dep) => {
       document.head.appendChild(getAmpScript(callback));
       document.head.appendChild(getAmpCss());
     }
-  }, [dep]);
+  }, []);
 };
 
 
 const loadPlayer = (playerRef) => () => {
-  if (window.AmpStoryPlayer) {
-    new window.AmpStoryPlayer(window, playerRef.current).load();
-  }
+ 
   
-  playerRef.current.add([
-    {
-      href:
-        "https://stories.marmiton.org/menu-de-la-semaine-4-10-janvier-dE3b4YkgP/"
-    }
-  ]);
 };
 
 function ReadIndex() {
 
-  const [mounted,setMounted] = useState(false)
-  const player = null
   const playerRef = useRef(null);
 
-  useEffect(()=>{
-    setMounted(true)
-  },['init'])
+  useAmpStoryPlayer(loadPlayer(playerRef))
 
-  useAmpStoryPlayer(loadPlayer(playerRef),mounted)
-
-  useEffect(()=>{
-    const player1 = document.getElementById("player1");
-    const player = document.getElementById("player2");
-    const lightboxEl = document.querySelector(".lightbox");
-
-    async function initializeWidget(idx) {
-      var stories = player.getStories();
-      console.log(stories)
-      player.show(stories[idx].href, null, {animate: true});
-      player.play();
-      //lightboxEl.classList.toggle("show");
-    }
-    if (player){
-      if (player.isReady) {
-        initializeWidget(1);
-      } else {
-        player.addEventListener("ready", () => {
-          initializeWidget(0);
-        });
-      }
-     
-      player.addEventListener("amp-story-player-close", () => {
-        player.pause();
-        lightboxEl.classList.toggle("show");
-      });
-    }
-  }, [mounted, playerRef])
+  
 
   
   return (
@@ -157,7 +119,7 @@ function ReadIndex() {
               <div className={styles.mainPlayer}>
                 {/* {mounted &&
                 ( */}
-                  <amp-story-player layout="fill" width="360" height="600" amp-cache="cdn.ampproject.org" id="player1">
+                  <amp-story-player layout="fill" width="360" height="600" amp-cache="cdn.ampproject.org" id="player1" ref={playerRef}>
                     <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
                       <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img/>
                         Stories in AMP - Hello World
@@ -177,66 +139,7 @@ function ReadIndex() {
               <Ads300/>
             </div>
           </div>
-          <div className="viewport">
-            <div className="entry-point-container">
-              <h1> Web Stories </h1>
-              <div className="circular-entry-point">
-                <div className="entry-points">
-                  <div className="entry-point-card-container">
-                  <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#FF6F32" }} 
-                    onClick={(e)=>{
-                      const lightboxEl = document.querySelector(".lightbox");
-                      lightboxEl.classList.toggle("show");
-                    }}/>
-                    <div>
-                      <span className="entry-point-card-title">Q&A with ZOE Newman</span>
-                    </div>
-                  </div>
-                  <div className="entry-point-card-container">
-                    <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#E6AD1C" }} />
-                    <div>
-                      <span className="entry-point-card-title">24 Hours in New York City</span>
-                    </div>
-                  </div>
-                  <div className="entry-point-card-container">
-                    <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#466FFF" }}/>
-                    <div>
-                      <span className="entry-point-card-title">The Next King of the Sea</span>
-                    </div>
-                  </div>
-                  <div className="entry-point-card-container">
-                    <Image className='img' width={100} height={100} src="https://picsum.photos/100/100" style={{ borderColor: "#4CA47C" }} />
-                    <div>
-                      <span className="entry-point-card-title">Spark a Passion for Reading</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br></br>
-
-            <div className="lightbox">
-              <amp-story-player className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
-                <script type="application/json">
-                  {`{
-                    "behavior": {
-                      "autoplay": false,
-                      "pageScroll": false
-                    },
-                      "controls": [{
-                      "name": "close",
-                      "position": "start"
-                    }]
-                  }`}
-                </script>
-
-                <a href="https://wsdemos.uc.r.appspot.com/ampfest/s1"></a>
-                <a href="https://wsdemos.uc.r.appspot.com/ampfest/s2"></a>
-                <a href="https://wsdemos.uc.r.appspot.com/ampfest/s3"></a>
-                <a href="https://wsdemos.uc.r.appspot.com/ampfest/s4"></a>
-              </amp-story-player>
-            </div>
-          </div>
+          <StoryPlayerWidget/>
           <div>
             <section></section>
             <aside></aside>

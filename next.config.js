@@ -8,7 +8,7 @@ module.exports = withBundleAnalyzer({
 
   reactStrictMode: true,
   images: {
-    domains: ['picsum.photos', 'localhost', 'api-nickscorp-app.herokuapp.com']
+    domains: ['picsum.photos', 'localhost', 'api-nickscorp-app.herokuapp.com','assets.codepen.io']
   },
   experimental: { images: { layoutRaw: true } },
   webpack(config) {
