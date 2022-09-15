@@ -2,13 +2,14 @@
     width: 100%;
     min-width: 300px;
     min-height: 300px;
-    margin: 2rem auto;
+    margin: 0 auto;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
     .adplaceholder{
         border: 1px solid #ccc;
         padding: 5px;

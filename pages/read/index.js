@@ -5,7 +5,7 @@ import styles from './index.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import Ads300 from '../../components/Ads/Ads300'
-
+import Logo from '../../components/Logo'
 
 const Slide = () =>{
   return(
@@ -108,6 +108,7 @@ function ReadIndex() {
     const player1 = document.getElementById("player1");
     const player = document.getElementById("player2");
     const lightboxEl = document.querySelector(".lightbox");
+
     async function initializeWidget(idx) {
       var stories = player.getStories();
       console.log(stories)
@@ -138,7 +139,10 @@ function ReadIndex() {
       <div>
         {/* <HomeMenu /> */}
         <main className={styles.main}>
-          <h3>Main articles</h3>
+          <div className={styles.head}>
+            <Logo style={{fontSize:"2rem"}}/>
+            {/* <h3>Main articles</h3> */}
+          </div>
           <br></br>
           <div className={styles.editorial}>
             <div className={styles.mainSlideShow}>
@@ -173,7 +177,7 @@ function ReadIndex() {
               <Ads300/>
             </div>
           </div>
-          {/* <div className="viewport">
+          <div className="viewport">
             <div className="entry-point-container">
               <h1> Web Stories </h1>
               <div className="circular-entry-point">
@@ -232,7 +236,7 @@ function ReadIndex() {
                 <a href="https://wsdemos.uc.r.appspot.com/ampfest/s4"></a>
               </amp-story-player>
             </div>
-          </div> */}
+          </div>
           <div>
             <section></section>
             <aside></aside>
