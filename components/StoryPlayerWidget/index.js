@@ -2,17 +2,28 @@ import React,{useState,useEffect,useRef} from 'react'
 import Image from 'next/image';
 import styles from './index.module.scss'
 
+
+async function initializeWidget(idx) {
+  const player = document.getElementById("player2");
+
+  var stories = player.getStories();
+  player.show(stories[idx].href, null, {animate: true});
+  player.play();
+  //lightboxEl.classList.toggle("show");
+}
+
+
 const Widget = ({img,pos,color,text,url,onclick}) =>{
     return(
-        <div className="entry-point-card-container">
+        <div className="entry-point-card-container" 
+        onClick={(e)=>{
+          const lightboxEl = document.querySelector(".lightbox");
+          lightboxEl.classList.add("show");
+          const player = document.getElementById("player2");
+          initializeWidget(pos)
+       }}>
             <Image 
                 className='img' width={100} height={100} src={img}  style={{ borderColor: `${color} !important` }}
-                onClick={(e)=>{
-                    const lightboxEl = document.querySelector(".lightbox");
-                    lightboxEl.classList.add("show");
-                    const player = document.getElementById("player2");
-                    player.show(url)
-                 }}
             />
             <div>
             <span className="entry-point-card-title">{text}</span>
@@ -73,14 +84,7 @@ export default function StoryPlayerWidget() {
       player.appendChild(script)
     },['init'])
 
-    async function initializeWidget(idx) {
-      const player = document.getElementById("player2");
-
-      var stories = player.getStories();
-      player.show(stories[idx].href, null, {animate: true});
-      player.play();
-      //lightboxEl.classList.toggle("show");
-    }
+   
 
 
     useEffect(()=>{
