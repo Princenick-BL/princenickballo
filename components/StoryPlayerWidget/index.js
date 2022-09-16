@@ -11,7 +11,7 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
                     const lightboxEl = document.querySelector(".lightbox");
                     lightboxEl.classList.add("show");
                     const player = document.getElementById("player2");
-                    player.go(pos)
+                    player.show(url)
                  }}
             />
             <div>
