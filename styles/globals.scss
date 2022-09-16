@@ -10,6 +10,12 @@ body {
 
 }
 
+#mainContent{
+	max-height: 99vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
 ::-webkit-scrollbar-track {
     border-radius: 10px;
     background-color: #ccc;
@@ -86,7 +92,6 @@ body {
 	visibility: visible;
 	z-index: 99999;
 	opacity: 1;
-	background-color: red;
 }
 
 amp-story-player.my-player {

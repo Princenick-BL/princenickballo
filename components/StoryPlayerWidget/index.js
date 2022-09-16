@@ -16,6 +16,7 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
         <div className="entry-point-card-container" 
           onClick={(e)=>{        
             onclick()
+            document.getElementById("mainContent").style.overflowX="hidden"
             //initializeWidget(pos)
         }}>
             <Image 
@@ -90,6 +91,8 @@ export default function StoryPlayerWidget() {
       const lightboxEl = document.querySelector(".lightbox");
 
       player.addEventListener("amp-story-player-close", () => {
+         document.getElementById("mainContent").style.overflowX="auto"
+
           player.pause();
           setShow(false)
       });

@@ -97,7 +97,7 @@ function ReadIndex() {
 
       <div>
         {/* <HomeMenu /> */}
-        <main className={styles.main}>
+        <main className={styles.main} id="mainContent">
           <div className={styles.head}>
             <Logo style={{fontSize:"2rem"}}/>
             {/* <h3>Main articles</h3> */}
