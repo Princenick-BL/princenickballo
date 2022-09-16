@@ -81,6 +81,7 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	transition: visibility 0.2s linear, opacity 0.2s linear;
+	position: relative;
 }
 
 .lightbox.show {

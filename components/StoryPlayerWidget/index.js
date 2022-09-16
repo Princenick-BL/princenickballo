@@ -16,7 +16,7 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
         <div className="entry-point-card-container" 
           onClick={(e)=>{        
             onclick()
-            document.getElementById("mainContent").style.overflowX="hidden"
+            document.getElementById("mainContent").style.overflowY="hidden"
             //initializeWidget(pos)
         }}>
             <Image 
@@ -91,7 +91,7 @@ export default function StoryPlayerWidget() {
       const lightboxEl = document.querySelector(".lightbox");
 
       player.addEventListener("amp-story-player-close", () => {
-         document.getElementById("mainContent").style.overflowX="auto"
+         document.getElementById("mainContent").style.overflowY="auto"
 
           player.pause();
           setShow(false)
@@ -130,6 +130,9 @@ export default function StoryPlayerWidget() {
             <br></br>
 
             <div className={`lightbox ${show?"show":""}`}>
+              {/* <div className={styles.side}>
+
+              </div> */}
               <amp-story-player className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
                 {stories.map((story,index)=>{
                     return(
