@@ -105,7 +105,6 @@ function ReadIndex() {
           <div className={styles.mobileWidget}>
             <StoryPlayerWidget/>
           </div>
-          <br></br>
           <div className={styles.editorial}>
             <div className={styles.mainSlideShow}>
                 <Slide/>

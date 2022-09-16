@@ -10,6 +10,8 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
                 onClick={(e)=>{
                     const lightboxEl = document.querySelector(".lightbox");
                     lightboxEl.classList.add("show");
+                    const player = document.getElementById("player2");
+                    player.go(pos)
                  }}
             />
             <div>
@@ -51,11 +53,6 @@ export default function StoryPlayerWidget() {
 
     const playerRef = useRef(null);
 
-    const show = (url) =>{
-      const player = document.getElementById("player2");
-      player.show(url, null, {animate: true})
-    }
-
     
     useEffect(()=>{
         const player = document.getElementById("player2");
@@ -80,7 +77,6 @@ export default function StoryPlayerWidget() {
       const player = document.getElementById("player2");
 
       var stories = player.getStories();
-      console.log(stories)
       player.show(stories[idx].href, null, {animate: true});
       player.play();
       //lightboxEl.classList.toggle("show");
