@@ -102,6 +102,9 @@ function ReadIndex() {
             <Logo style={{fontSize:"2rem"}}/>
             {/* <h3>Main articles</h3> */}
           </div>
+          <div className={styles.mobileWidget}>
+            <StoryPlayerWidget/>
+          </div>
           <br></br>
           <div className={styles.editorial}>
             <div className={styles.mainSlideShow}>
@@ -136,7 +139,10 @@ function ReadIndex() {
               <Ads300/>
             </div>
           </div>
-          <StoryPlayerWidget/>
+          <div className={styles.desktopWidget}>
+            <StoryPlayerWidget/>
+          </div>
+
           <div>
             <section></section>
             <aside></aside>

@@ -8,6 +8,20 @@
     padding-top: .5rem;
     min-height: 800px;
 
+    .desktopWidget{
+        @media only screen and (max-width: 800px) {
+            display: none;
+        }
+
+    }
+    .mobileWidget{
+        display: none;
+        
+        @media only screen and (max-width: 500px) {
+            display: flex;
+        }
+    }
+
     .head{
         display: flex;
         align-items: center;
