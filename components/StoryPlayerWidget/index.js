@@ -16,11 +16,9 @@ async function initializeWidget(idx) {
 const Widget = ({img,pos,color,text,url,onclick}) =>{
     return(
         <div className="entry-point-card-container" 
-          onClick={(e)=>{
-            const lightboxEl = document.querySelector(".lightbox");
-            lightboxEl.classList.add("show");
-            const player = document.getElementById("player2");
+          onClick={(e)=>{        
             initializeWidget(pos)
+            onclick()
         }}>
             <Image 
                 className='img' width={100} height={100} src={img}  style={{ borderColor: `${color} !important` }}
@@ -33,6 +31,8 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
 }
 
 export default function StoryPlayerWidget() {
+
+  const [show,setShow]=useState(false)
     
     
     const [stories,setStories] = useState([
@@ -93,7 +93,7 @@ export default function StoryPlayerWidget() {
 
         player.addEventListener("amp-story-player-close", () => {
             player.pause();
-            lightboxEl.classList.remove("show");
+            setShow(false)
         });
 
        
@@ -122,6 +122,7 @@ export default function StoryPlayerWidget() {
                             color = {story.color}
                             text = {story.text}
                             url={story.url}
+                            onclick={(e)=>{setShow(!show)}}
                         />
                     )
                   })}
@@ -130,7 +131,7 @@ export default function StoryPlayerWidget() {
             </div>
             <br></br>
 
-            <div className="lightbox">
+            <div className={`lightbox ${show?"show":""}`}>
               <amp-story-player className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
                 {stories.map((story,index)=>{
                     return(
