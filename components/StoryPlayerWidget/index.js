@@ -16,12 +16,12 @@ async function initializeWidget(idx) {
 const Widget = ({img,pos,color,text,url,onclick}) =>{
     return(
         <div className="entry-point-card-container" 
-        onClick={(e)=>{
-          const lightboxEl = document.querySelector(".lightbox");
-          lightboxEl.classList.add("show");
-          const player = document.getElementById("player2");
-          initializeWidget(pos)
-       }}>
+          onClick={(e)=>{
+            const lightboxEl = document.querySelector(".lightbox");
+            lightboxEl.classList.add("show");
+            const player = document.getElementById("player2");
+            initializeWidget(pos)
+        }}>
             <Image 
                 className='img' width={100} height={100} src={img}  style={{ borderColor: `${color} !important` }}
             />
