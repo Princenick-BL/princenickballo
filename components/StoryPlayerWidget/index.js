@@ -5,11 +5,9 @@ import styles from './index.module.scss'
 
 async function initializeWidget(idx) {
   const player = document.getElementById("player2");
-
   var stories = player.getStories();
   player.show(stories[idx].href, null, {animate: true});
   player.play();
-  //lightboxEl.classList.toggle("show");
 }
 
 
@@ -17,8 +15,8 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
     return(
         <div className="entry-point-card-container" 
           onClick={(e)=>{        
-            initializeWidget(pos)
             onclick()
+            //initializeWidget(pos)
         }}>
             <Image 
                 className='img' width={100} height={100} src={img}  style={{ borderColor: `${color} !important` }}
@@ -88,25 +86,22 @@ export default function StoryPlayerWidget() {
 
 
     useEffect(()=>{
-        const player = document.getElementById("player2");
-        const lightboxEl = document.querySelector(".lightbox");
+      const player = document.getElementById("player2");
+      const lightboxEl = document.querySelector(".lightbox");
 
-        player.addEventListener("amp-story-player-close", () => {
-            player.pause();
-            setShow(false)
+      player.addEventListener("amp-story-player-close", () => {
+          player.pause();
+          setShow(false)
+      });
+
+      
+      if (player){
+        player.addEventListener("ready", () => {
+          initializeWidget(0);
         });
+      }
+    }, [playerRef])
 
-       
-        if (player){
-
-            player.addEventListener("ready", () => {
-              initializeWidget(0);
-            });
-          
-         
-          
-        }
-      }, [playerRef])
   return (
     <div className="viewport">
             <div className="entry-point-container">
@@ -135,8 +130,7 @@ export default function StoryPlayerWidget() {
               <amp-story-player className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
                 {stories.map((story,index)=>{
                     return(
-                        <a key={index} href={story?.url}></a>
-
+                      <a key={index} href={story?.url}></a>
                     )
                   })}
               </amp-story-player>
