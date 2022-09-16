@@ -2,7 +2,7 @@ import React,{useState,useEffect,useRef} from 'react'
 import Image from 'next/image';
 import styles from './index.module.scss'
 
-const Widget = ({img,color,text,url}) =>{
+const Widget = ({img,pos,color,text,url,onclick}) =>{
     return(
         <div className="entry-point-card-container">
             <Image 
@@ -10,6 +10,7 @@ const Widget = ({img,color,text,url}) =>{
                 onClick={(e)=>{
                     const lightboxEl = document.querySelector(".lightbox");
                     lightboxEl.classList.add("show");
+                    return onclick(pos)
                  }}
             />
             <div>
@@ -51,6 +52,11 @@ export default function StoryPlayerWidget() {
 
     const playerRef = useRef(null);
 
+    const show = (url) =>{
+      const player = document.getElementById("player2");
+      player.show(url, null, {animate: true})
+    }
+
     
     useEffect(()=>{
         const player = document.getElementById("player2");
@@ -71,6 +77,17 @@ export default function StoryPlayerWidget() {
       player.appendChild(script)
     },['init'])
 
+    async function initializeWidget(idx) {
+      const player = document.getElementById("player2");
+
+      var stories = player.getStories();
+      console.log(stories)
+      player.show(stories[idx].href, null, {animate: true});
+      player.play();
+      //lightboxEl.classList.toggle("show");
+    }
+
+
     useEffect(()=>{
         const player = document.getElementById("player2");
         const lightboxEl = document.querySelector(".lightbox");
@@ -80,14 +97,7 @@ export default function StoryPlayerWidget() {
             lightboxEl.classList.remove("show");
         });
 
-        async function initializeWidget(idx) {
-          var stories = player.getStories();
-          console.log(stories)
-          player.show(stories[idx].href, null, {animate: true});
-          player.play();
-          //lightboxEl.classList.toggle("show");
-        }
-
+       
         if (player){
           if (player.isReady) {
             initializeWidget(1);
@@ -110,9 +120,12 @@ export default function StoryPlayerWidget() {
                     return(
                         <Widget
                             key={index}
+                            pos={index}
                             img={story.img}
                             color = {story.color}
                             text = {story.text}
+                            url={story.url}
+                            onclick={(e)=>{initializeWidget(e)}}
                         />
                     )
                   })}

@@ -91,10 +91,7 @@ function ReadIndex() {
   const playerRef = useRef(null);
 
   useAmpStoryPlayer(loadPlayer(playerRef))
-
-  
-
-  
+ 
   return (
     <>
 
