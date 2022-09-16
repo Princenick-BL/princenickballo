@@ -169,7 +169,7 @@
             padding: .5rem;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
             font-size: 14px;
             position: absolute;
             bottom: 0;
@@ -184,6 +184,8 @@
             }
             .name{
                 max-width: calc(100% - 55px);
+                min-width: calc(100% - 55px);
+
                 //white-space: nowrap ;
                 //text-overflow: ellipsis;
                 //overflow: hidden; 

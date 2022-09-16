@@ -99,13 +99,11 @@ export default function StoryPlayerWidget() {
 
        
         if (player){
-          if (player.isReady) {
-            initializeWidget(1);
-          } else {
+
             player.addEventListener("ready", () => {
               initializeWidget(0);
             });
-          }
+          
          
           
         }
