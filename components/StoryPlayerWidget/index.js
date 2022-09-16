@@ -10,7 +10,6 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
                 onClick={(e)=>{
                     const lightboxEl = document.querySelector(".lightbox");
                     lightboxEl.classList.add("show");
-                    return onclick(pos)
                  }}
             />
             <div>
@@ -123,7 +122,6 @@ export default function StoryPlayerWidget() {
                             color = {story.color}
                             text = {story.text}
                             url={story.url}
-                            onclick={(e)=>{initializeWidget(e)}}
                         />
                     )
                   })}
