@@ -24,7 +24,9 @@ const Card = ({card}) =>{
                     {card?.title}
                 </h1>
                 <div className={styles.titlebottom}>
-                    <a href='/'>{"Read >>"}</a>
+                    <Link href='/'>
+                        <a >{"Read >>"}</a>
+                    </Link>
                     <span>{card.keywords?.join(" - ")}</span>
                 </div>
             </div>
