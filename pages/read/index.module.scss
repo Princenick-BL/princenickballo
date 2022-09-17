@@ -8,19 +8,6 @@
     padding-top: .5rem;
     min-height: 800px;
 
-    .desktopWidget{
-        @media only screen and (max-width: 950px) {
-            display: none;
-        }
-
-    }
-    .mobileWidget{
-        display: none;
-        
-        @media only screen and (max-width: 950px) {
-            display: flex;
-        }
-    }
 
     .head{
         display: flex;

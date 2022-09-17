@@ -1,29 +1,30 @@
 import React,{useState,useEffect} from 'react'
 import styles from './index.module.scss'
 import Image from 'next/image'
+import { FaEye } from 'react-icons/fa';
 
 
-const Card = () =>{
+const Card = ({card}) =>{
     return(
-        <div className={styles.card} >
+        <div className={styles.card} style={{borderColor:card?.color?card?.color:"var(--color-primary)"}}>
             <div className={styles.publisher}>
                 <Image
-                    src={"https://picsum.photos/500/400"}
+                    src={card?.author?.logo}
                     width="40"
                     height="40"
                     layout="fixed"
                     className={styles.publisher_logo}
                 />
-                <div className={styles.name}>Published by <strong>Prince Nick Ballo</strong> on Sep,14,2022</div>
+                <div className={styles.name}>Published by <strong>{card?.author?.name}</strong> on {card?.date}</div>
             </div>
             <br></br>
             <div className={styles.title}>
                 <h1>
-                    Pourquoi choisir react js au lieu de next js et vis versa
+                    {card?.title}
                 </h1>
-                <span>{"ReactJS - Web - Web3 - Javascript"}</span>
+                <span>{card.keywords?.join(" - ")}</span>
             </div>
-            <div className={styles.read}>150 read</div>
+            <div className={styles.read}><FaEye/>&nbsp;&nbsp;{card?.reads} </div>
         </div>
     )
 }
@@ -32,20 +33,54 @@ export default function LasrArticle() {
 
     const [data,setData] = useState([
         {
-            id:1,
+            author : {
+                name :"Prince Nick BALLO",
+                logo : "https://assets.codepen.io/1780597/4.png"
+            },
+            date : "2022-09-17",
+            reads : "300",
+            keywords : ["ReactJS","NextJs","Web","Web3"],
+            title : "Pourquoi choisir react js au lieu de next js et vis versa",
+            color : '#FF6F32',
+
         },
         {
-            id:1,
+            author : {
+                name :"Prince Nick BALLO",
+                logo : "https://assets.codepen.io/1780597/4.png"
+            },
+            date : "2022-09-17",
+            reads : "300",
+            keywords : ["ReactJS","NextJs","Web","Web3"],
+            title : "Pourquoi choisir react js au lieu de next js et vis versa",
+            color :"#E6AD1C" ,
+
         },
         {
-            id:1,
+            author : {
+                name :"Prince Nick BALLO",
+                logo : "https://assets.codepen.io/1780597/4.png"
+            },
+            date : "2022-09-17",
+            reads : "300",
+            keywords : ["ReactJS","NextJs","Web","Web3"],
+            title : "Pourquoi choisir react js au lieu de next js et vis versa",
+            color : "#466FFF",
+
         },
         {
-            id:1,
+            author : {
+                name :"Prince Nick BALLO",
+                logo : "https://assets.codepen.io/1780597/4.png"
+            },
+            date : "2022-09-17",
+            reads : "300",
+            keywords : ["ReactJS","NextJs","Web","Web3"],
+            title : "Pourquoi choisir react js au lieu de next js et vis versa",
+            color : "#4CA47C",
+
         },
-        {
-            id:1,
-        }
+       
     ])
 
   return (
@@ -72,7 +107,7 @@ export default function LasrArticle() {
             </div>
             {data.map(((card,index)=>{
                 return(
-                    <Card key={index}/>
+                    <Card key={index} card={card}/>
                 )
             }))}
            
