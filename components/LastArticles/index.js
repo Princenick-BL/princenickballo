@@ -70,9 +70,9 @@ export default function LasrArticle() {
                     </div>
                 </div>
             </div>
-            {data.map((card=>{
+            {data.map(((card,index)=>{
                 return(
-                    <Card/>
+                    <Card key={index}/>
                 )
             }))}
            
