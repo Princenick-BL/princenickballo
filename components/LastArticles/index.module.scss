@@ -47,7 +47,7 @@
       
     .card {
         display: flex;
-        height: 340px;
+        height: calc(340px - 2rem);
         width: 300px;
         background-color: #fff;
         border: 2px solid #17141d;
@@ -58,6 +58,49 @@
         position: relative;
         left: 0px;
         min-width: 300px;
+        padding: 1rem;
+        flex-direction: column;
+
+        .publisher{
+            max-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            width: calc(100% - 1rem );
+            .publisher_logo{
+                width: 20px;
+                height: 20px;
+                min-width: 20px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+           
+            .name{
+                max-width: calc( 100% - 50px);
+
+            }
+            .read{
+                min-width: 80px;
+            }
+
+        }
+
+        .title{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 1rem 0;
+            h1{
+                color: #000;
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            span{
+                color: var(--color-primary);
+            }
+        }
     }
       
     .card:not(:first-child) {
