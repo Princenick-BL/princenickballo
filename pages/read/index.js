@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Ads300 from '../../components/Ads/Ads300'
 import Logo from '../../components/Logo'
 import StoryPlayerWidget from '../../components/StoryPlayerWidget'
-
+import LasrArticle from '../../components/LastArticles'
 
 const Slide = () =>{
   return(
@@ -143,8 +143,7 @@ function ReadIndex() {
           </div>
 
           <div>
-            <section></section>
-            <aside></aside>
+            <LasrArticle/>
           </div>
         </main>
       </div>
