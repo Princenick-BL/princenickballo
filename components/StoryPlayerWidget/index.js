@@ -21,7 +21,13 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
             //initializeWidget(pos)
         }}>
             <Image 
-                className='img' width={100} height={100} src={img}  style={{ borderColor: `${color} !important` }}
+                className='img' width={100} height={100} src={img}  
+                style={{ 
+                  borderColor: `${color} !important`,
+                  border: `2px solid ${color}`,
+
+                }}
+                
             />
             <div>
             <span className="entry-point-card-title">{text}</span>

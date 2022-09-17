@@ -10,7 +10,7 @@ export default function Pagination(props) {
     useEffect(()=>{
         const query = new URLSearchParams(window.location.search);
         const token = query.get('page')
-        setCurrent(token||1)        
+        setCurrent(parseInt(token)||1)        
     },[])
     
     return (
@@ -20,6 +20,9 @@ export default function Pagination(props) {
             </Link>
             <div className={styles.pagination}>
                 {lenght.map(val=>{
+                    
+                    console.log(val,current,(val+1 === 1) || (val+1 === current) || (val+1 === (current + 1)) || (val+1 === lenght.length))
+
                     if((val+1 === 1) || (val+1 === current) || (val+1 === (current + 1)) || (val+1 === lenght.length)){
                         return(
                             <Link key={val}  href={val+1==1 ?"/read":`/read/article/?page=${val+1}`}>

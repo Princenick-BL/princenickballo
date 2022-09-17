@@ -33,14 +33,13 @@ const Slide = () =>{
                           <div className={styles.publisher}>
                             <Image
                                 src={"https://picsum.photos/500/400"}
-                                width="20"
-                                height="20"
+                                width="40"
+                                height="40"
                                 layout="fixed"
                                 className={styles.publisher_logo}
-                                style={{minWidth:"20px"}}
+                                style={{minWidth:"40px"}}
                             />
                             <div className={styles.name}>Published by <strong>Prince Nick Ballo</strong> on Sep,14,2022</div>
-                            <div className={styles.read}>150 read</div>
 
                           </div>
                         </div>
