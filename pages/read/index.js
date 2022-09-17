@@ -7,7 +7,6 @@ import Link from 'next/link'
 import Ads300 from '../../components/Ads/Ads300'
 import Logo from '../../components/Logo'
 import StoryPlayerWidget from '../../components/StoryPlayerWidget'
-import LasrArticle from '../../components/LastArticles'
 
 const Slide = () =>{
   return(
@@ -20,24 +19,27 @@ const Slide = () =>{
                         <Image
                             src={"https://picsum.photos/500/400"}
                             width="400"
-                            height="200"
+                            height="250"
                             layout="responsive"
                             className={styles.img}
                         />
                         <div className={styles.mark_down}>
-                            <h5 className={styles.cat}>Catérorie</h5>
+                            {/* <h5 className={styles.cat}>Catérorie</h5> */}
                             <span className={styles.desc}>No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.</span>
                         </div>
 
                         <div className={styles.publisher}>
                           <Image
                               src={"https://picsum.photos/500/400"}
-                              width="40"
-                              height="40"
+                              width="20"
+                              height="20"
                               layout="fixed"
                               className={styles.publisher_logo}
+                              style={{minWidth:"20px"}}
                           />
                           <div className={styles.name}>Published by <strong>Prince Nick Ballo</strong> on Sep,14,2022</div>
+                          <div className={styles.read}>150 read</div>
+
                         </div>
                     </div>
                 </a>
@@ -143,7 +145,6 @@ function ReadIndex() {
           </div>
 
           <div>
-            <LasrArticle/>
           </div>
         </main>
       </div>

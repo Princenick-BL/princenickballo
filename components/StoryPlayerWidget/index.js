@@ -1,6 +1,7 @@
 import React,{useState,useEffect,useRef} from 'react'
 import Image from 'next/image';
 import styles from './index.module.scss'
+import LasrArticle from '../LastArticles'
 
 
 async function initializeWidget(idx) {
@@ -125,6 +126,8 @@ export default function StoryPlayerWidget() {
                     )
                   })}
                 </div>
+                <LasrArticle/>
+
               </div>
             </div>
             <br></br>
