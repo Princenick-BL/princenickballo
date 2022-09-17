@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import styles from './index.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FaEye } from 'react-icons/fa';
 
 
@@ -23,7 +24,7 @@ const Card = ({card}) =>{
                     {card?.title}
                 </h1>
                 <div className={styles.titlebottom}>
-                    <a href='#'>{"Read >>"}</a>
+                    <a href='/'>{"Read >>"}</a>
                     <span>{card.keywords?.join(" - ")}</span>
                 </div>
             </div>
@@ -89,13 +90,8 @@ export default function LasrArticle() {
   return (
     <div className={styles.wrapper}>
 
-        <div classNamz={styles.container} style={{
-            display:"flex",
-            width: "100%",
-            height: "max-content",
-            overflowY: "hidden",
-            paddingTop: "3rem",
-            paddingBottom: ".5rem"
+        <div className={styles.container} style={{
+            
         }}>
             <div className={styles.mostreadedArticle}>
                 <div className={styles.title}>
@@ -113,7 +109,14 @@ export default function LasrArticle() {
                     <Card key={index} card={card}/>
                 )
             }))}
-           
+           <div className={styles.mostreadedArticleMore}>
+                
+                <div>
+                    <Link href="/">
+                        <a> Read more. </a>
+                    </Link>
+                </div>
+            </div>
         </div>
     </div>
   )

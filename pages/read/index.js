@@ -1,12 +1,12 @@
 import React,{useEffect,useState,useRef} from 'react'
-import Head from 'next/head'
-import {HomeMenu} from '../../components/Menu'
 import styles from './index.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import Ads300 from '../../components/Ads/Ads300'
 import Logo from '../../components/Logo'
 import StoryPlayerWidget from '../../components/StoryPlayerWidget'
+import Footer from '../../components/footer/footer'
+import Pagination from '../../components/Pagination'
 
 const Slide = () =>{
   return(
@@ -91,7 +91,8 @@ const loadPlayer = (playerRef) => () => {
   
 };
 
-function ReadIndex() {
+function ReadIndex(props) {
+
 
   const playerRef = useRef(null);
 
@@ -141,12 +142,13 @@ function ReadIndex() {
               <Ads300/>
             </div>
           </div>
-            {/* <div className={styles.desktopWidget}>
-              <StoryPlayerWidget/>
-            </div> */}
+          <br></br>
+          <br></br>
+          <Pagination/>
+          <br></br>
+          <br></br>
 
-          <div>
-          </div>
+          <Footer/>
         </main>
       </div>
     </>
