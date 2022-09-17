@@ -10,13 +10,20 @@
         display: flex;
         overflow-x: auto;
    
-      }
+    }
+
+    ::-webkit-scrollbar{
+        display: none;
+        height: 0;
+    }
+
       
       .card {
         display: flex;
         height: 340px;
         width: 300px;
-        background-color: #17141d;
+        background-color: #f3f3f3;
+        border: 2px solid #17141d;
         border-radius: 10px;
         box-shadow: -1rem 0 3rem #000;
       /*   margin-left: -50px; */
