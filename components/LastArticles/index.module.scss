@@ -101,6 +101,14 @@
                 color: var(--color-primary);
             }
         }
+        .titlebottom{
+            display: flex;
+            flex-direction: column;
+            a{
+                margin-bottom: 1rem;
+                color: blue;
+            }
+        }
         .read{
             display: flex;
             align-items: center;
@@ -112,7 +120,7 @@
     }
       
       .card:hover {
-        transform: translateY(-20px);
+        //transform: translateY(-20px);
         transition: 0.4s ease-out;
       }
       

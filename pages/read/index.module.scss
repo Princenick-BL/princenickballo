@@ -109,7 +109,18 @@
             @media only screen and (max-width: 600px) {
                 width: 100% !important;
             }
+            .bonttom{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: calc( 100% - 200px);            
+            }
         }
+
+        .slider{
+            position: relative;
+        }
+
         @media only screen and (max-width: 950px) {
             .slide{
                 width: 48%;

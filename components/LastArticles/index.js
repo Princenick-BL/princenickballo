@@ -22,7 +22,10 @@ const Card = ({card}) =>{
                 <h1>
                     {card?.title}
                 </h1>
-                <span>{card.keywords?.join(" - ")}</span>
+                <div className={styles.titlebottom}>
+                    <a href='#'>{"Read >>"}</a>
+                    <span>{card.keywords?.join(" - ")}</span>
+                </div>
             </div>
             <div className={styles.read}><FaEye/>&nbsp;&nbsp;{card?.reads} </div>
         </div>
