@@ -16,7 +16,13 @@ export default function LasrArticle() {
         }}>
             <div className={styles.mostreadedArticle}>
                 <div className={styles.title}>
-                    Most readed article
+                    <span>
+                        scroll left
+                    </span>
+                    <br></br>
+                    <div>
+                        MOST READED ARTICLES
+                    </div>
                 </div>
             </div>
             <div className={styles.card} >
