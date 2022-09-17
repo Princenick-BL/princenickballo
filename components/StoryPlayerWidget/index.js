@@ -20,15 +20,15 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
             document.getElementById("mainContent").style.overflowY="hidden"
             //initializeWidget(pos)
         }}>
-            <Image 
-                className='img' width={100} height={100} src={img}  
-                style={{ 
-                  borderColor: `${color} !important`,
-                  border: `2px solid ${color}`,
+            <div className='img-container' style={{ 
+                    borderColor: `${color} !important`,
+                    border: `2px solid ${color}`,
 
-                }}
-                
-            />
+                  }}>
+              <Image 
+                  className='img' width={100} height={100} src={img}/>
+
+            </div>
             <div>
             <span className="entry-point-card-title">{text}</span>
             </div>

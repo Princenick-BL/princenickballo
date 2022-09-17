@@ -21,7 +21,7 @@ body {
     background-color: #ccc;
 
 }
-::-webkit-scrollbar{
+body::-webkit-scrollbar{
     width: 2px;
     background-color: #F5F5F5;
 	display: none;
@@ -128,15 +128,19 @@ background: #888;
 .entry-points::-webkit-scrollbar-thumb:hover {
 background: #555;
 }
-
+.circular-entry-point .img-container{
+	border-radius: 100%;
+	padding: 3px !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .circular-entry-point .img {
 	cursor: pointer;
 	width: 100px;
 	height: 100px;
 	border-radius: 100%;
 	background-clip: content-box;
-	border: 2px solid !important;
-	padding: 3px !important;
 }
 
 .entry-point-card-container {

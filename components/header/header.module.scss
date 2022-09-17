@@ -6,6 +6,7 @@
 .headerContainer{
     width: 100%;
     color: rgb(65, 65, 65);
+
 }
 
 .headTop{
@@ -35,7 +36,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url("/images/barniere.png");
     background-repeat: no-repeat;
     background-size: 100%;
 
@@ -77,6 +77,9 @@
         width: 90%;
         height: 80% ;
         padding: 2em;
+        a{
+            text-decoration: none;
+        }
         .discoverText{
             padding-bottom: 1em;
             width: 40%;

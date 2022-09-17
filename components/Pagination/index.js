@@ -21,8 +21,6 @@ export default function Pagination(props) {
             <div className={styles.pagination}>
                 {lenght.map(val=>{
                     
-                    console.log(val,current,(val+1 === 1) || (val+1 === current) || (val+1 === (current + 1)) || (val+1 === lenght.length))
-
                     if((val+1 === 1) || (val+1 === current) || (val+1 === (current + 1)) || (val+1 === lenght.length)){
                         return(
                             <Link key={val}  href={val+1==1 ?"/read":`/read/article/?page=${val+1}`}>
