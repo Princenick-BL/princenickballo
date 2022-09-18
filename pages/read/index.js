@@ -8,7 +8,7 @@ import StoryPlayerWidget from '../../components/StoryPlayerWidget'
 import Footer from '../../components/footer/footer'
 import Pagination from '../../components/Pagination'
 import Slide from '../../components/CardView'
-import { getArticle } from '../../services/articles'
+import { getArticle ,getTopArticles} from '../../services/articles'
 
 const ampStoryPlayerUrl = "https://cdn.ampproject.org/amp-story-player-v0";
 
@@ -58,22 +58,13 @@ const loadPlayer = (playerRef) => () => {
   
 };
 
-function ReadIndex(props) {
+function ReadIndex({topA,page1}) {
 
 
   const playerRef = useRef(null);
   useAmpStoryPlayer(loadPlayer(playerRef))
 
-  const [articles,setArticles] = useState([])
 
-  useEffect(()=>{
-    (async()=>{
-      const topA = await getArticle({filter :{page:1}})
-      if(topA){
-        setArticles(topA)
-      }
-    })();
-  },[])
 
  
   return (
@@ -86,10 +77,10 @@ function ReadIndex(props) {
             <Logo style={{fontSize:"2rem"}}/>
             {/* <h3>Main articles</h3> */}
           </div>
-          <StoryPlayerWidget />
+          <StoryPlayerWidget topA={topA}/>
           <div className={styles.editorial}>
             <div className={styles.mainSlideShow}>
-              {articles.map((article,index)=>{
+              {page1.map((article,index)=>{
                 return(
                   <Slide key={index} article={article} style={{paddingBottom:".5rem"}}/>
                 )
@@ -135,3 +126,23 @@ function ReadIndex(props) {
 // });
 
 export default ReadIndex
+
+
+export async function getServerSideProps(context) {
+  // Fetch data from external API
+
+  const page1 =  await getArticle({filter:{
+    page : 1
+  }})
+
+  const topA =  await getTopArticles()
+
+  //console.log(res.length)
+
+  return { 
+      props: {
+        page1 : page1 || [],
+        topA : topA || []
+      } 
+  }
+}

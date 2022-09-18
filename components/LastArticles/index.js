@@ -36,16 +36,9 @@ const Card = ({card ,index}) =>{
     )
 }
 
-export default function LasrArticle() {
+export default function LasrArticle({topA}) {
 
-    const [topArticle,setTopArticle] = useState([])
-
-    useEffect(()=>{
-        (async()=>{
-          const topA = await getTopArticles()
-          setTopArticle(topA)
-        })();
-      },[])
+    
 
     const [data,setData] = useState([
         {
@@ -116,7 +109,7 @@ export default function LasrArticle() {
                     </div>
                 </div>
             </div>
-            {topArticle.map(((card,index)=>{
+            {topA.map(((card,index)=>{
                 return(
                     <Card key={index} index={index} card={card}/>
                 )
