@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { FaEye } from 'react-icons/fa';
 
 
-const Card = ({card}) =>{
+const Card = ({card ,index}) =>{
     return(
-        <div className={styles.card} style={{borderColor:card?.color?card?.color:"var(--color-primary)"}}>
+        <div className={styles.card} style={{borderColor:index === 1 ? "#FF6F32":index === 2 ? "#E6AD1C":index === 3 ? "#466FFF":"#4CA47C"}}>
             <div className={styles.publisher}>
                 <Image
                     src={card?.author?.logo}
@@ -16,7 +16,7 @@ const Card = ({card}) =>{
                     layout="fixed"
                     className={styles.publisher_logo}
                 />
-                <div className={styles.name}>Published by <strong>{card?.author?.name}</strong> on {card?.date}</div>
+                <div className={styles.name}>Published by <strong>{card?.author?.name || "Prince Nick BALLO"}</strong> on {new Date(card?.updatedAt).toLocaleDateString()||"2022-09-17"}</div>
             </div>
             <br></br>
             <div className={styles.title}>
@@ -30,12 +30,12 @@ const Card = ({card}) =>{
                     <span>{card.keywords?.join(" - ")}</span>
                 </div>
             </div>
-            <div className={styles.read}><FaEye/>&nbsp;&nbsp;{card?.reads} </div>
+            <div className={styles.read}><FaEye/>&nbsp;&nbsp;{card?.reads||"300"} </div>
         </div>
     )
 }
 
-export default function LasrArticle() {
+export default function LasrArticle({topArticle}) {
 
     const [data,setData] = useState([
         {
@@ -106,9 +106,9 @@ export default function LasrArticle() {
                     </div>
                 </div>
             </div>
-            {data.map(((card,index)=>{
+            {topArticle.map(((card,index)=>{
                 return(
-                    <Card key={index} card={card}/>
+                    <Card key={index} index={index} card={card}/>
                 )
             }))}
            <div className={styles.mostreadedArticleMore}>

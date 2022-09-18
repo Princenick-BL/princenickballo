@@ -9,10 +9,18 @@ export const getArticle = async ()=>{
     return null
 }
 
+export const count = async ()=>{
+    const res = await axios.get(`${config.API_ENDPOINT}/article/count`)
+    if(res.data.success){
+        return res.data.data
+    }
+    return null
+}
+
 export const getTopArticles = async ()=>{
     const res = await axios.get(`${config.API_ENDPOINT}/article/top`)
-    if(res){
-        return res.data
+    if(res.data.success){
+        return res.data.data
     }
     return null
 }

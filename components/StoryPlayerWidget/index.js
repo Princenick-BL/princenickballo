@@ -36,7 +36,7 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
     )
 }
 
-export default function StoryPlayerWidget() {
+export default function StoryPlayerWidget({topArticle}) {
 
   const [show,setShow]=useState(false)
     
@@ -132,7 +132,7 @@ export default function StoryPlayerWidget() {
                     )
                   })}
                 </div>
-                <LasrArticle/>
+                <LasrArticle topArticle={topArticle}/>
 
               </div>
             </div>

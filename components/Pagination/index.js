@@ -1,23 +1,34 @@
 import React,{useEffect, useState} from 'react'
 import Link from 'next/link'
 import styles from './index.module.scss'
+import { count } from '../../services/articles'
+import axios from 'axios'
 
-export default function Pagination(props) {
+export default function Pagination({type=1}) {
 
     const [current,setCurrent] = useState(1)
-    const [lenght,setLength] = useState(Array.from(Array(10).keys()))
+    const [lenght,setLength] = useState([])
 
     useEffect(()=>{
-        const query = new URLSearchParams(window.location.search);
-        const token = query.get('page')
-        setCurrent(parseInt(token)||1)        
+        (async()=>{
+            const query = new URLSearchParams(window.location.search);
+            const token = query.get('page')
+            setCurrent(parseInt(token)||1)        
+            const countRes = await count()
+            var size = parseInt(token)==1 ? ~~(countRes+6/10) : ~~(countRes/10)
+           
+            setLength(Array.from(Array(size||1).keys()))
+            
+        })();
     },[])
     
     return (
         <div className={styles.container}>
-            <Link  href={`/read/article/?page=${current-1}`}>
-                <a className={styles.button}>{"PREV"}</a>
-            </Link>
+            {current-1 > 0 && (
+                <Link  href={`/read/article/?page=${current-1}`}>
+                    <a className={styles.button}>{"PREV"}</a>
+                </Link>
+            )}
             <div className={styles.pagination}>
                 {lenght.map(val=>{
                     
@@ -34,9 +45,12 @@ export default function Pagination(props) {
                     }
                 })}
             </div>
-            <Link  href={`/read/article/?page=${current+1}`}>
-                <a className={styles.button}>{"NEXT"}</a>
-            </Link>
+            {lenght.length > 1 && (
+                <Link  href={`/read/article/?page=${current+1}`}>
+                    <a className={styles.button}>{"NEXT"}</a>
+                </Link>
+            )}
+            
         </div>
     )
 }

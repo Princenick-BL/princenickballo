@@ -8,6 +8,7 @@ import StoryPlayerWidget from '../../components/StoryPlayerWidget'
 import Footer from '../../components/footer/footer'
 import Pagination from '../../components/Pagination'
 import Slide from '../../components/CardView'
+import { getTopArticles } from '../../services/articles'
 
 const ampStoryPlayerUrl = "https://cdn.ampproject.org/amp-story-player-v0";
 
@@ -61,8 +62,17 @@ function ReadIndex(props) {
 
 
   const playerRef = useRef(null);
-
   useAmpStoryPlayer(loadPlayer(playerRef))
+
+  const [topArticle,setTopArticle] = useState([])
+
+  useEffect(()=>{
+    (async()=>{
+      const topA = await getTopArticles()
+      setTopArticle(topA)
+    })();
+  },[])
+
  
   return (
     <>
@@ -74,7 +84,7 @@ function ReadIndex(props) {
             <Logo style={{fontSize:"2rem"}}/>
             {/* <h3>Main articles</h3> */}
           </div>
-          <StoryPlayerWidget/>
+          <StoryPlayerWidget topArticle = {topArticle}/>
           <div className={styles.editorial}>
             <div className={styles.mainSlideShow}>
                 <Slide/>
