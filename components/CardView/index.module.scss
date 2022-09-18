@@ -8,7 +8,6 @@
     @media only screen and (min-width: 600px) {
         background-color: #fff;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-
     }
     margin-bottom: .5rem;
     border-radius: 5px;
@@ -33,13 +32,12 @@
         border-radius: 10px;
     }
     @media only screen and (max-width: 600px) {
-        width: 100% !important;
+        width: calc(100% - 1rem) !important;
     }
     .bonttom{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: calc( 100% - 200px);   
         padding: 1rem;     
         padding-top: 0;
         padding-bottom: .5rem !important;    
@@ -52,7 +50,7 @@
             width: 100%;
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             line-height: 1.5 !important;
             margin: 0 !important;
@@ -61,11 +59,11 @@
             width: 100%;
             overflow: hidden;
             display: -webkit-box;
-                -webkit-line-clamp: 8;
-            
+                -webkit-line-clamp: 7;
             -webkit-box-orient: vertical;
             line-height: 1.5 !important;
             margin: 0 !important;
+            font-size: 1.3rem;
         }
     }
 }
@@ -92,7 +90,7 @@
         height: 42%;
         order: -2;
         .desc{
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
         }
     }
     .slide:nth-child(2) {
@@ -100,7 +98,7 @@
         -ms-flex-order: -1;
         order: -1;
         .desc{
-            -webkit-line-clamp: 8;
+            -webkit-line-clamp: 6;
         }
 
     }
@@ -173,11 +171,17 @@
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
-    //position: absolute;
-    //bottom: 0;
-    //background-color: #fff;
-    width: calc(100% - 1rem );
-    margin-top: 1rem;
+    @media only screen and (min-width: 600px) {
+        position: absolute;
+        bottom: 0;
+        background-color: #fff;
+        width: calc(100% - 1rem );
+        margin-top: 1rem;
+        padding-left: .5rem;
+        padding-bottom: .2rem;
+        padding-top: .2rem;
+    }
+    
     // position: absolute;
     // bottom: 0;
     

@@ -31,18 +31,18 @@ export default function Slide({article,style}){
 
                           </div>
 
-                          <div className={styles.publisher}>
-                            <Image
-                                src={article.author.logo}
-                                width="40"
-                                height="40"
-                                layout="fixed"
-                                className={styles.publisher_logo}
-                                style={{minWidth:"40px"}}
-                            />
-                            <div className={styles.name}>Published by <strong>{article.author.name}</strong> on {new Date(article.updatedAt).toLocaleDateString()}</div>
+                        </div>
+                        <div className={styles.publisher}>
+                          <Image
+                              src={article.author.logo}
+                              width="40"
+                              height="40"
+                              layout="fixed"
+                              className={styles.publisher_logo}
+                              style={{minWidth:"40px"}}
+                          />
+                          <div className={styles.name}>Published by <strong>{article.author.name}</strong> on {new Date(article.updatedAt).toLocaleDateString()}</div>
 
-                          </div>
                         </div>
                     </div>
                 </a>
