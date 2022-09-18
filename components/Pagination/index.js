@@ -4,7 +4,7 @@ import styles from './index.module.scss'
 import { count } from '../../services/articles'
 import axios from 'axios'
 
-export default function Pagination({type=1}) {
+export default function Pagination({ev}) {
 
     const [current,setCurrent] = useState(1)
     const [lenght,setLength] = useState([])
@@ -20,7 +20,7 @@ export default function Pagination({type=1}) {
             setLength(Array.from(Array(Math.ceil(availableSize/10)||1).keys())) 
             //console.log(Math.ceil(availableSize/10))
         })();
-    },[])
+    },[ev])
     
     return (
         <div className={styles.container}>
@@ -37,7 +37,7 @@ export default function Pagination({type=1}) {
             <div className={styles.pagination}>
                 {lenght.map(val=>{
                     
-                    if((val+1 === 1) || (val+1 === current) || (val+1 === (current + 1)) || (val+1 === lenght.length)){
+                    if((val+1 === 1) || (val+1 === current)|| (val+1 === (current - 1)) || (val+1 === (current + 1)) || (val+1 === lenght.length)){
                         return(
                             <Link key={val}  href={val+1==1 ?"/read":`/read/article/?page=${val+1}`}>
                                 <div className={styles.nextLink + " "+ (val+1==current?styles.current:"")}>{val+1}</div>
@@ -45,7 +45,7 @@ export default function Pagination({type=1}) {
                         )
                         
                     }else{
-                        return <div key={val}>.</div>
+                        return <div style={{color:"#fff"}} key={val}>.</div>
 
                     }
                 })}

@@ -23,7 +23,7 @@ export default function index({articles}) {
           
         </div>
       </div>
-      <Pagination/>
+      <Pagination ev={articles}/>
       <Footer/>
     </div>
   )
