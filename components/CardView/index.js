@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Slide(){
+export default function Slide({article}){
   return(
     <div
         className={styles.slide} 
@@ -12,9 +12,9 @@ export default function Slide(){
                 <a>
                     <div className={styles.slider}>
                         <Image
-                            src={"https://picsum.photos/500/400"}
-                            width="400"
-                            height="250"
+                            src={article.poster}
+                            width={article.meta.width}
+                            height={article.meta.height}
                             layout="responsive"
                             className={styles.img}
                         />
@@ -22,19 +22,19 @@ export default function Slide(){
 
                           <div className={styles.mark_down}>
                               {/* <h5 className={styles.cat}>Catérorie</h5> */}
-                              <span className={styles.desc}>No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.No comments to show.</span>
+                              <span className={styles.desc}>{article.title}</span>
                           </div>
 
                           <div className={styles.publisher}>
                             <Image
-                                src={"https://picsum.photos/500/400"}
+                                src={article.author.logo}
                                 width="40"
                                 height="40"
                                 layout="fixed"
                                 className={styles.publisher_logo}
                                 style={{minWidth:"40px"}}
                             />
-                            <div className={styles.name}>Published by <strong>Prince Nick Ballo</strong> on Sep,14,2022</div>
+                            <div className={styles.name}>Published by <strong>{article.author.name}</strong> on {new Date(article.updatedAt).toLocaleDateString()}</div>
 
                           </div>
                         </div>

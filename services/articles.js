@@ -1,10 +1,10 @@
 import { config } from "../constants";
 import axios from 'axios'
 
-export const getArticle = async ()=>{
-    const res = await axios.get(`${config.API_ENDPOINT}/article`)
-    if(res){
-        return res.data
+export const getArticle = async ({filter})=>{
+    const res = await axios.get(`${config.API_ENDPOINT}/article?${Object.keys(filter).map(key => key + '=' + filter[key]).join('&')}`)
+    if(res.data.success){
+        return res.data.data
     }
     return null
 }

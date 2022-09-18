@@ -3,6 +3,7 @@ import styles from './index.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaEye } from 'react-icons/fa';
+import { getTopArticles } from '../../services/articles';
 
 
 const Card = ({card ,index}) =>{
@@ -35,7 +36,16 @@ const Card = ({card ,index}) =>{
     )
 }
 
-export default function LasrArticle({topArticle}) {
+export default function LasrArticle() {
+
+    const [topArticle,setTopArticle] = useState([])
+
+    useEffect(()=>{
+        (async()=>{
+          const topA = await getTopArticles()
+          setTopArticle(topA)
+        })();
+      },[])
 
     const [data,setData] = useState([
         {
