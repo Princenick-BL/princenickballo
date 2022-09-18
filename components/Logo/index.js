@@ -7,7 +7,7 @@ export default function Logo({single,style}) {
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
-        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"></link>    
+        <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"></link>    
       </Head>
       {single ? (
         <div className={styles.logo} style={style}>{`D`}</div>

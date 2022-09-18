@@ -9,5 +9,15 @@
   min-height: 800px;
   .content{
     min-height: 100vh;
+    display: flex;
+    .left{
+      width: calc(100% - 320px);
+      display: grid;
+      grid-template-columns: auto auto;
+      padding: 10px;
+    }
+    .right{
+      width: 320px;
+    }
   }
 }

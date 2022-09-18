@@ -3,10 +3,14 @@ import styles from './index.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Slide({article}){
+export default function Slide({article,style}){
   return(
     <div
         className={styles.slide} 
+        style={{
+          textAlign:"unset",
+          ...style
+        }}
         >
             <Link href={"#"}>
                 <a>

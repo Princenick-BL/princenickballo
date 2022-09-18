@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import styles from './index.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaEye } from 'react-icons/fa';
+import { FaEye,FaNewspaper } from 'react-icons/fa';
 import { getTopArticles } from '../../services/articles';
 
 
@@ -26,7 +26,7 @@ const Card = ({card ,index}) =>{
                 </h1>
                 <div className={styles.titlebottom}>
                     <Link href='/'>
-                        <a >{"Read >>"}</a>
+                        <a >{"Read this article "}	&#10148;</a>
                     </Link>
                     <span>{card.keywords?.join(" - ")}</span>
                 </div>
@@ -122,11 +122,13 @@ export default function LasrArticle() {
                 )
             }))}
            <div className={styles.mostreadedArticleMore}>
-                
                 <div>
-                    <Link href="/">
-                        <a> Read more. </a>
+                    <Link href="/read/article?page=2">
+                        <a> Read more article &#10148; </a>
                     </Link>
+                </div>
+                <div className={styles.icon}>
+                    <FaNewspaper size={30}/>
                 </div>
             </div>
         </div>
