@@ -91,7 +91,7 @@ function ReadIndex(props) {
             <div className={styles.mainSlideShow}>
               {articles.map((article,index)=>{
                 return(
-                  <Slide key={index} article={article}/>
+                  <Slide key={index} article={article} style={{paddingBottom:".5rem"}}/>
                 )
               })}
             </div>

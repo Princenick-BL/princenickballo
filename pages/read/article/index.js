@@ -15,7 +15,7 @@ export default function index({articles}) {
 
           {articles?.map((article,index)=>{
             return(
-              <Slide key={index} article={article} style={{width:"calc(100% - 1rem)",margin:".5rem !important",height:"calc(100% - 1rem)"}}/>
+              <Slide key={index} article={article} style={{width:"calc(100% - 1rem)",margin:".5rem !important",height:"calc(100% - 1rem)"}} type={1}/>
             )
           })}
         </div>

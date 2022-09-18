@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Slide({article,style}){
+export default function Slide({article,style,type=0}){
   return(
     <div
         className={styles.slide} 
@@ -27,7 +27,7 @@ export default function Slide({article,style}){
                           <div className={styles.mark_down}>
                               {/* <h5 className={styles.cat}>Catérorie</h5> */}
                               <h2 className={styles.h2}>{article.title}</h2>
-                              <span className={styles.desc}>{article.description}</span>
+                              <span className={styles.desc+" "+(type==1 ?styles.type2:"" )}>{article.description}</span>
 
                           </div>
 
