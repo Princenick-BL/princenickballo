@@ -12,7 +12,7 @@ export default function Slide({article,style}){
           ...style
         }}
         >
-            <Link href={"#"}>
+            <Link href={"/"}>
                 <a>
                     <div className={styles.slider}>
                         <Image
@@ -26,7 +26,9 @@ export default function Slide({article,style}){
 
                           <div className={styles.mark_down}>
                               {/* <h5 className={styles.cat}>Catérorie</h5> */}
-                              <span className={styles.desc}>{article.title}</span>
+                              <h2 className={styles.h2}>{article.title}</h2>
+                              <span className={styles.desc}>{article.description}</span>
+
                           </div>
 
                           <div className={styles.publisher}>
