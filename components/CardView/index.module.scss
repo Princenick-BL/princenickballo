@@ -43,8 +43,9 @@
         padding-top: 0;
         padding-bottom: .5rem !important;    
         position: relative;
-        
+        margin-bottom: 70px;
         @media only screen and (max-width: 600px) {
+            margin-bottom: unset;
             padding: 0;
         }
         h2{
