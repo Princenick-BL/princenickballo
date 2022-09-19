@@ -12,17 +12,25 @@ import { getArticle ,getTopArticles} from '../../services/articles'
 
 const ampStoryPlayerUrl = "https://cdn.ampproject.org/amp-story-player-v0";
 
+function getAmpPlayerScript(callback) {
+  const ampJS = document.createElement("script");
+  ampJS.async = true;
+  ampJS.src ="https://cdn.ampproject.org/v0/amp-story-player-0.1.js";
+  //ampJS.onload = callback;
+  return ampJS;
+}
+
 function getAmpScript(callback) {
   const ampJS = document.createElement("script");
   ampJS.async = true;
-  ampJS.src = ampStoryPlayerUrl + ".js";
+  ampJS.src ="https://cdn.ampproject.org/v0.js";
   //ampJS.onload = callback;
   return ampJS;
 }
 
 function getAmpCss() {
   const ampCSS = document.createElement("link");
-  ampCSS.href = ampStoryPlayerUrl + ".css";
+  ampCSS.href = "https://cdn.ampproject.org/v0.css";
   ampCSS.rel = "stylesheet";
   ampCSS.type = "text/css";
 
@@ -37,16 +45,18 @@ const useAmpStoryPlayer = (callback) => {
     );
     if (!ampScript) {
       document.head.appendChild(getAmpScript(callback));
-      document.head.appendChild(getAmpCss());
+      document.head.appendChild(getAmpPlayerScript(callback));
+
+      //document.head.appendChild(getAmpCss());
     }
   }, []);
 };
 
 
 const loadPlayer = (playerRef) => () => {
-  if (window.AmpStoryPlayer) {
-    console.log("window");
-    new window.AmpStoryPlayer(window, playerRef.current).load();
+  const player = document.getElementById("player1");
+  if (player) {
+    player.load();
   }
 
   // playerRef.current.add([
@@ -60,11 +70,9 @@ const loadPlayer = (playerRef) => () => {
 
 function ReadIndex({topA,page1}) {
 
+
   const playerRef = useRef(null);
-  useAmpStoryPlayer()
-  useEffect(()=>{
-    loadPlayer(playerRef)
-  },[])
+  useAmpStoryPlayer(loadPlayer(playerRef))
  
   return (
     <>
@@ -89,7 +97,7 @@ function ReadIndex({topA,page1}) {
               <div className={styles.mainPlayer}>
                 {/* {mounted &&
                 ( */}
-                  <amp-story-player layout="fill" width="360" height="600" amp-cache="cdn.ampproject.org" id="player1" ref={playerRef}>
+                  <amp-story-player layout="responsive" width="360" height="600" amp-cache="cdn.ampproject.org" id="player1" ref={playerRef}>
                     <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
                       <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img/>
                         Stories in AMP - Hello World

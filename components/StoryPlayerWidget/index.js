@@ -38,7 +38,7 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
 
 export default function StoryPlayerWidget({topA}) {
 
-  const [show,setShow]=useState(false)
+  const [show,setShow]=useState(true)
     
     
     const [stories,setStories] = useState([
@@ -99,18 +99,17 @@ export default function StoryPlayerWidget({topA}) {
 
       player.addEventListener("amp-story-player-close", () => {
          document.getElementById("mainContent").style.overflowY="auto"
-
-          player.pause();
-          setShow(false)
+          player.play()
+          // player.pause();
+          // setShow(false)
       });
 
       
-      if (player){
-        player.addEventListener("ready", () => {
-          initializeWidget(0);
-        });
-      }
-    }, [playerRef])
+      player.addEventListener("ready", () => {
+        initializeWidget(0);
+      });
+      
+    }, [])
 
   return (
     <div className="viewport">
@@ -142,7 +141,7 @@ export default function StoryPlayerWidget({topA}) {
               {/* <div className={styles.side}>
 
               </div> */}
-              <amp-story-player className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
+              <amp-story-player style={{width:"100vw"}} layout="fill" className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
                 {stories.map((story,index)=>{
                     return(
                       <a key={index} href={story?.url}></a>
