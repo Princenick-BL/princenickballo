@@ -7,6 +7,8 @@ body {
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
   height: 100%;
       background-color: #202029;
+	  -ms-overflow-style: none; /* IE 11 */
+	  scrollbar-width: none; /* Firefox 64 */
 
 }
 
@@ -107,6 +109,8 @@ amp-story-player.my-player {
 	padding-bottom: 10px;
 	justify-content: space-between;
 	overflow-x: scroll;
+	-ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
 }
 /* width */
 .entry-points::-webkit-scrollbar {

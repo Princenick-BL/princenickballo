@@ -49,23 +49,22 @@ const loadPlayer = (playerRef) => () => {
     new window.AmpStoryPlayer(window, playerRef.current).load();
   }
 
-  playerRef.current.add([
-    {
-      href:
-        "https://stories.marmiton.org/menu-de-la-semaine-4-10-janvier-dE3b4YkgP/"
-    }
-  ]);
+  // playerRef.current.add([
+  //   {
+  //     href:
+  //       "https://stories.marmiton.org/menu-de-la-semaine-4-10-janvier-dE3b4YkgP/"
+  //   }
+  // ]);
   
 };
 
 function ReadIndex({topA,page1}) {
 
-
   const playerRef = useRef(null);
-  useAmpStoryPlayer(loadPlayer(playerRef))
-
-
-
+  useAmpStoryPlayer()
+  useEffect(()=>{
+    loadPlayer(playerRef)
+  },[])
  
   return (
     <>

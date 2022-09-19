@@ -1,6 +1,7 @@
 .wrapper{
     display: flex;
-
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
     .container {
         display: flex;
         width: 100%;
@@ -8,7 +9,8 @@
         overflow-y: hidden;
         padding-top: 3rem;
         padding-bottom: .5rem;
-
+        -ms-overflow-style: none; /* IE 11 */
+        scrollbar-width: none; /* Firefox 64 */
     }
     .mostreadedArticleMore{
         min-width: calc(150px - 1rem);

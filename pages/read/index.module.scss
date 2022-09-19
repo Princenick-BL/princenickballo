@@ -47,11 +47,14 @@
             flex-direction: column;
             height: 100%;
         }
+        @media only screen and (min-width: 600px) {
+            margin-top: 2rem;
+        }
         .mainSlideShow{
             height: 100%;
-            width: 65%;
-            min-width: 65%;
-            max-width: 65%;
+            width: 67%;
+            min-width: 67%;
+            max-width: 67%;
             position: relative;
             overflow: hidden;
             display: flex;
