@@ -18,7 +18,7 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
           onClick={(e)=>{        
             onclick()
             document.getElementById("mainContent").style.overflowY="hidden"
-            //initializeWidget(pos)
+            initializeWidget(pos)
         }}>
             <div className='img-container' style={{ 
                     borderColor: `${color} !important`,
@@ -38,7 +38,7 @@ const Widget = ({img,pos,color,text,url,onclick}) =>{
 
 export default function StoryPlayerWidget({topA}) {
 
-  const [show,setShow]=useState(true)
+  const [show,setShow]=useState(false)
     
     
     const [stories,setStories] = useState([
@@ -99,14 +99,15 @@ export default function StoryPlayerWidget({topA}) {
 
       player.addEventListener("amp-story-player-close", () => {
          document.getElementById("mainContent").style.overflowY="auto"
-          player.play()
-          // player.pause();
-          // setShow(false)
+          player.pause();
+          setShow(false)
       });
 
       
       player.addEventListener("ready", () => {
+        player.play()
         initializeWidget(0);
+        player.pause()
       });
       
     }, [])
