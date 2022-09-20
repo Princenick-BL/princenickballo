@@ -142,7 +142,7 @@ export default function StoryPlayerWidget({topA}) {
               {/* <div className={styles.side}>
 
               </div> */}
-              <amp-story-player style={{width:"100vw"}} layout="fill" className="my-player" id="player2"  amp-cache="cdn.ampproject.org">
+              <amp-story-player style={{width:"100vw,100vh"}} layout="fill" id="player2">
                 {stories.map((story,index)=>{
                     return(
                       <a key={index} href={story?.url}></a>

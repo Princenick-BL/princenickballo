@@ -17,7 +17,7 @@ const Card = ({card ,index}) =>{
                     layout="fixed"
                     className={styles.publisher_logo}
                 />
-                <div className={styles.name}>Published by <strong>{card?.author?.name || "Prince Nick BALLO"}</strong> on {new Date(card?.updatedAt).toLocaleDateString()||"2022-09-17"}</div>
+                <div className={styles.name}>Published by <strong>{card?.author?.name || "Prince Nick BALLO"}</strong> on {new Date(card?.updatedAt).toDateString()||"2022-09-17"}</div>
             </div>
             <br></br>
             <div className={styles.title}>

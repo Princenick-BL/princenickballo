@@ -97,7 +97,7 @@ function ReadIndex({topA,page1}) {
               <div className={styles.mainPlayer}>
                 {/* {mounted &&
                 ( */}
-                  <amp-story-player layout="responsive" width="360" height="600" amp-cache="cdn.ampproject.org" id="player1" ref={playerRef}>
+                  {/* <amp-story-player style={{position:"relative",width:"100%",height:"100%"}} layout="responsive" width="360" height="600" id="player1" ref={playerRef}>
                     <a href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/">
                       <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img/>
                         Stories in AMP - Hello World
@@ -110,7 +110,7 @@ function ReadIndex({topA,page1}) {
                       <img src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg" width="360" height="600" loading="lazy" data-amp-story-player-poster-img />
                       Stories in AMP - Hello World
                     </a>
-                  </amp-story-player>
+                  </amp-story-player> */}
 
                 {/* )} */}
               </div>
