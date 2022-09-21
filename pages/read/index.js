@@ -41,7 +41,7 @@ const useAmpStoryPlayer = (callback) => {
   useEffect(() => {
     console.log("useAmpStoryPlayer");
     const ampScript = document.querySelector(
-      `script[src="${ampStoryPlayerUrl + ".js"}"]`
+      `script[src="https://cdn.ampproject.org/v0/amp-story-player-0.1.js"]`
     );
     if (!ampScript) {
       document.head.appendChild(getAmpScript(callback));
