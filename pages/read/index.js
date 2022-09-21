@@ -220,7 +220,7 @@ function ReadIndex({topA,page1}) {
               {/* <div className={styles.side}>
 
               </div> */}
-              <amp-story-player layout="fixed" width="360" height="600"id="player2" >
+              <amp-story-player style={{width:"100vw",height:"100vh"}} layout="fixed" width="360" height="600"id="player2" >
                 {stories.map((story,index)=>{
                     return(
                       <a key={index} href={story?.url}></a>
