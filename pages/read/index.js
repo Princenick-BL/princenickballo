@@ -9,6 +9,7 @@ import Pagination from '../../components/Pagination'
 import Slide from '../../components/CardView'
 import { getArticle ,getTopArticles} from '../../services/articles'
 import TheSideBar from '../../components/ThesideBar'
+import Head from 'next/head'
 
 //export const config = { amp: true };
 
@@ -74,7 +75,7 @@ const loadPlayer = (playerRef) => () => {
 async function initializeWidget(idx) {
   const player = document.getElementById("player2");
   var stories = player.getStories();
-  //player.show(stories[idx].href, null, {animate: true});
+  player.show(stories[idx].href, null, {animate: true});
   player.play();
 }
 
@@ -107,7 +108,7 @@ function ReadIndex({topA,page1}) {
 
 
   const playerRef = useRef(null);
-  useAmpStoryPlayer(loadPlayer(playerRef))
+  //useAmpStoryPlayer(loadPlayer(playerRef))
 
   const [show,setShow]=useState(false)
     
@@ -175,7 +176,14 @@ function ReadIndex({topA,page1}) {
  
   return (
     <>
-
+      <Head>
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script
+    async
+    custom-element="amp-story-player"
+    src="https://cdn.ampproject.org/v0/amp-story-player-0.1.js"
+  ></script>
+      </Head>
       <div id="mainContent">
         {/* <HomeMenu /> */}
         <main className={styles.main} >
@@ -212,7 +220,7 @@ function ReadIndex({topA,page1}) {
               {/* <div className={styles.side}>
 
               </div> */}
-              <amp-story-player layout="fill" id="player2" >
+              <amp-story-player layout="fixed" width="360" height="600"id="player2" >
                 {stories.map((story,index)=>{
                     return(
                       <a key={index} href={story?.url}></a>
