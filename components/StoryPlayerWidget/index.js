@@ -113,43 +113,6 @@ export default function StoryPlayerWidget({topA}) {
     }, [])
 
   return (
-    <div className="viewport">
-            <div className="entry-point-container">
-              <h1> Web Stories </h1>
-              <div className="circular-entry-point">
-                <div className="entry-points">
-                  {stories.map((story,index)=>{
-                    return(
-                        <Widget
-                            key={index}
-                            pos={index}
-                            img={story.img}
-                            color = {story.color}
-                            text = {story.text}
-                            url={story.url}
-                            onclick={(e)=>{setShow(!show)}}
-                        />
-                    )
-                  })}
-                </div>
-                <LasrArticle topA={topA}/>
-
-              </div>
-            </div>
-            <br></br>
-
-            <div className={`lightbox ${show?"show":""}`}>
-              {/* <div className={styles.side}>
-
-              </div> */}
-              <amp-story-player layout="fill" id="player2" >
-                {stories.map((story,index)=>{
-                    return(
-                      <a key={index} href={story?.url}></a>
-                    )
-                  })}
-              </amp-story-player>
-            </div>
-          </div>
+    <></>
   )
 }

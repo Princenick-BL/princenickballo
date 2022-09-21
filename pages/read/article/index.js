@@ -5,6 +5,7 @@ import Pagination from '../../../components/Pagination'
 import Footer from '../../../components/footer/footer'
 import { getArticle } from '../../../services/articles'
 import Slide from '../../../components/CardView'
+import TheSideBar from '../../../components/ThesideBar'
 
 export default function index({articles}) {
   return (
@@ -19,9 +20,7 @@ export default function index({articles}) {
             )
           })}
         </div>
-        <div className={styles.right}>
-          
-        </div>
+        <TheSideBar/>
       </div>
       <Pagination ev={articles}/>
       <Footer/>
