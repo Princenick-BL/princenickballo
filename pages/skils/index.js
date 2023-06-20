@@ -4,30 +4,36 @@ import HeadCustom from '../../components/HeadCustom'
 import Link from 'next/link'
 import Image from 'next/image'
 
+import softIng from '../../public/images/software-ing-view.png'
+import devOps from '../../public/images/dev-ops-ing-view.png'
+import biangbigData from '../../public/images/bi-big-data-ing-view.png'
+import aiAndMl from '../../public//images/machine-learning-ing-view.png'
+
+
 const skils = [
   {
     id: "software-engineering-1",
     title : "Software Ingeenering",
     description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : "/images/software-ing-view.png"
+    img : softIng
   },
   {
     id: "dev-ops",
     title : "Dev Ops",
     description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : "/images/dev-ops-ing-view.png"
+    img : devOps
   },
   {
     id: "bi-and-big-data",
     title : "BI and Big Data",
     description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : "/images/bi-big-data-ing-view.png"
+    img : biangbigData
   },
   {
     id: "ai-and-machine-learning",
     title : "AI and Machine learning",
     description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : "/images/machine-learning-ing-view.png"
+    img : aiAndMl
   }
 ]
 

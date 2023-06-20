@@ -1,13 +1,14 @@
 import React from 'react'
-import { HomeV2 } from '.'
 import HeadCustom from '../components/HeadCustom'
+import Caroussel from '../components/caroussel'
 
 export default function v2() {
   return (
     <>
     <HeadCustom theme='#202029'/>
 
-    <HomeV2/>
+    <Caroussel />
+
     </>
     )
 }

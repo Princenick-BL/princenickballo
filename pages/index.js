@@ -13,10 +13,7 @@ export default function Home() {
   return (
     <>
       <HeadCustom/>
-      <main>
-
-        <Caroussel />
-      </main>
+      <HomeV2/>
     </>
   )
 }
