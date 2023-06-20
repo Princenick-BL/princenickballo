@@ -1,9 +1,9 @@
 .homeV2 {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-y: scroll;
     width: calc(100vw - 4rem);
-    height: calc(100vh - 4rem);
+    min-height: calc(100vh - 4rem);
     padding: 2rem;
     color: #fff;
     font-family: "Acta", sans-serif, serif;
