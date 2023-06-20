@@ -12,8 +12,8 @@ export default function Home() {
 
   return (
     <>
-      <HeadCustom/>
-      <HomeV2/>
+      <HeadCustom preview={"/images/preview2.png"} theme='#202029'/>
+      <HomeV2 />
     </>
   )
 }

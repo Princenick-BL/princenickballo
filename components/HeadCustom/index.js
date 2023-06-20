@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-export default function HeadCustom({theme="#fff"}) {
+export default function HeadCustom({theme="#fff",preview = {preview}}) {
   return (
     <Head>
     {/* <!-- HTML Meta Tags --> */}
@@ -19,7 +19,7 @@ export default function HeadCustom({theme="#fff"}) {
     <meta property="og:type" content="website" />
     <meta property="og:title" content="PRINCE NICK BALLO - INGENIEUR LOGICIE" />
     <meta property="og:description" content="Prince Nick BALLO : Ingénieur logiciel, Développeur Full Stack Javascript, Developpeurs de themes et plugins Wordpress, Symfony developpeur, Data anylste pythons" />
-    <meta property="og:image" content="/images/preview.png" />
+    <meta property="og:image" content={preview} />
 
     {/* <!-- Twitter Meta Tags --> */}
     <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +27,7 @@ export default function HeadCustom({theme="#fff"}) {
     <meta property="twitter:url" content="https://princenickballo.fr" />
     <meta name="twitter:title" content="PRINCE NICK BALLO - INGENIEUR LOGICIE" />
     <meta name="twitter:description" content="Prince Nick BALLO : Ingénieur logiciel, Développeur Full Stack Javascript, Developpeurs de themes et plugins Wordpress, Symfony developpeur, Data anylste python" />
-    <meta name="twitter:image" content="/images/preview.png" />
+    <meta name="twitter:image" content={preview} />
 
     {/* <!-- Meta Tags Generated via https://www.opengraph.xyz --> */}
 

@@ -5,7 +5,7 @@ import Caroussel from '../components/caroussel'
 export default function v2() {
   return (
     <>
-    <HeadCustom theme='#202029'/>
+    <HeadCustom />
 
     <Caroussel />
 
