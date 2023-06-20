@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-export default function HeadCustom({theme="#fff",preview = {preview}}) {
+export default function HeadCustom({theme="#fff",preview = "/images/preview.png"}) {
   return (
     <Head>
     {/* <!-- HTML Meta Tags --> */}
