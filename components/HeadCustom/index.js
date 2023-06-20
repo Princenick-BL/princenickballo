@@ -1,14 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
 
-export default function HeadCustom() {
+export default function HeadCustom({theme="#fff"}) {
   return (
     <Head>
     {/* <!-- HTML Meta Tags --> */}
     <meta charSet="UTF-8" />
     <title>PRINCE NICK BALLO - INGENIEUR LOGICIEL</title>
     <meta name="description" content="Prince Nick BALLO : Ingénieur logiciel, Développeur Full Stack Javascript, Developpeurs de themes et plugins Wordpress, Symfony developpeur, Data anylste python" />
-    <meta name="theme-color" content="#f3f3f3" />
+    <meta name="theme-color" content={theme} />
 
     {/* Lien font googlr */}
     <link rel="preconnect" href="https://fonts.googleapis.com" />

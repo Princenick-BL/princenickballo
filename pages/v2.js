@@ -5,7 +5,7 @@ import HeadCustom from '../components/HeadCustom'
 export default function v2() {
   return (
     <>
-    <HeadCustom/>
+    <HeadCustom theme='#202029'/>
 
     <HomeV2/>
     </>
