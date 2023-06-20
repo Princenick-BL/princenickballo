@@ -15,7 +15,9 @@ export default class caroussel extends Component {
 							<div className="untitled__slideContent">
 							<div className="untitled__slideContent_content">
 
-								<span>ELÈVE INGENIEUR EN INFORMATIQUE </span> 
+								<span>INGENIEUR EN INFORMATIQUE </span> 
+								<span>{"< GENIE LOGICIEL & DATA SCIENCE />"} </span> 
+
 								<div>
 									<span>&#9733;</span>
 									<span>&#9733;</span>
@@ -55,19 +57,19 @@ export default class caroussel extends Component {
 				</div>
 				<nav className="untitled__nav">
 				<ul>
-						<li>
+						{/* <li>
 							<Link href='/read'>
 								<a >BLOG</a>
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link href='/projects'>
-								<a>MES PROJETS</a>
+								<a>CRÉATIONS</a>
 							</Link>
 						</li>
 						<li>
 							<Link href='/curriculum-vitae/read'>
-								<a >MOI</a>
+								<a >A PROPOS</a>
 							</Link>
 						</li>
 					</ul>

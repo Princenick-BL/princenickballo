@@ -12,6 +12,75 @@ body {
 
 }
 
+@font-face {
+	font-family: UntitledSerif;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-serif-web-regular-a6c373ab8d.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: UntitledSerif;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-serif-web-bold-d74859b69b.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: UntitledSerif;
+	font-style: italic;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-serif-web-regular-italic-9efb743619.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: UntitledSerif;
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-serif-web-bold-italic-5268a7a1e5.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: UntitledSansSerif;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-sans-web-regular-017b0e7860.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: UntitledSansSerif;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-sans-web-medium-77ddaa284a.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: UntitledSansSerif;
+	font-style: italic;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-sans-web-regular-italic-7101828186.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: UntitledSansSerif;
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/untitled-sans-web-medium-italic-21e6f01675.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: Acta;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/Acta-Medium-88e95f9e4b.woff2) format("woff2")
+}
+
+@font-face {
+	font-family: Acta;
+	font-style: italic;
+	font-display: swap;
+	src: url(https://cdn2c.bustle.com/2023/bustle/Acta-MediumItalic2-ee955ff025.woff2) format("woff2")
+}
+
 // #mainContent{
 // 	max-height: 99vh;
 // 	overflow-y: auto;
@@ -155,14 +224,14 @@ background: #555;
 
 /* Extra stuff that makes sample aesthetic. */
 
-body h1 {
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 27px;
-	font-family: Poppins;
-	margin-bottom: 35px;
-	margin-left: 20px;
-}
+// body h1 {
+// 	font-weight: 600;
+// 	font-size: 18px;
+// 	line-height: 27px;
+// 	font-family: Poppins;
+// 	margin-bottom: 35px;
+// 	margin-left: 20px;
+// }
 
 .fake-content {
 	width: 320px;

@@ -22,7 +22,7 @@ export default class MediaLeft extends Component {
                         </div>
                     </a>
                 </Link>
-                <Link href="mailto:princenickballo@gmail.com?subject=Prise de contact">
+                <Link href="mailto:contact@princenickballo.fr?subject=Prise de contact">
                     <a>
                         <div className={style.media}>
                             <Image width={25} height={25} src="/icons/mail.jpeg" alt="gmail"/>                         
