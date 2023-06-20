@@ -49,7 +49,7 @@ export default function Skils() {
           <div className={styles.right}>
             {skils?.map((s,i)=>{
               return(
-              <div id={s?.id} className={styles.skill+ " "+(i%2!=0 ? styles.odd : "")}>
+              <div key={i} id={s?.id} className={styles.skill+ " "+(i%2!=0 ? styles.odd : "")}>
                 <div className={styles.box}>
                   <div className={styles.head}>
                     <h3>{s?.title}</h3>
