@@ -46,7 +46,7 @@ export default function Skils() {
 
   return (
     <>
-      <HeadCustom theme='#202029'/>
+      <HeadCustom preview={"/images/preview2.png"} theme='#202029'/>
 
       <div id='software-engineering' className={styles.main}>
       <div className={styles.logo}>

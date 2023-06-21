@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function index() {
     return (
         <>
-            <HeadCustom />
+            <HeadCustom preview={"/images/preview2.png"} theme='#202029'/>
 
             <div className={styles.homeV2}>
                 <div className={styles.logo}>
