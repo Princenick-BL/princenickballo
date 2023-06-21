@@ -2464,11 +2464,13 @@ export default function handler(req, res) {
           </amp-story-grid-layer></amp-story-page</amp-story></body>
     </html>
   `
+
+  var html2 = 'Coming soon...'
   res.setHeader(
     "Content-Type", 'text/html; charset=utf-8' 
   );    
   res.setHeader(
     "Accept-Encoding" , 'gzip, compress, br'
   )
-  res.send(html)
+  res.send(html2)
 }
