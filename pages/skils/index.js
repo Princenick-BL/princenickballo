@@ -14,26 +14,31 @@ const skils = [
   {
     id: "software-engineering-1",
     title : "Software Ingeenering",
-    description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : softIng
+    description : `With extensive experience, I have explored the creation and maintenance of diverse applications, including CRM systems, content publishing platforms, and landing pages. Working from requirements, I design applications that optimize efficiency, follow-up, and cost reduction while meeting customer needs. These experiences have enhanced my ability to develop APIs, responsive web apps, publishing software, and mobile apps. Consequently, I have strengthened my skills in full-stack JavaScript, PHP, and other development frameworks.`,
+    img : softIng,
+    skils : ["React JS","Next JS","Node JS","Symfony","Wordpress","JavaScript"]
   },
   {
     id: "dev-ops",
     title : "Dev Ops",
-    description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : devOps
+    description : "In terms of my dev ops experience, I have specialized in designing and implementing deployment, monitoring, and continuous integration systems for various applications. This involved working with cloud servers, dedicated servers, and cloud hosting, utilizing solutions like Google Cloud, OVH Cloud, and AWS. I have proficiency in monitoring and tracking using tools such as Grafana and Splunk, while also implementing log management systems and alerts for efficient management.One of the most interesting projects was the migration of an infrastructure from one cloud architecture to another, with a cost reduction of over 30%.",
+    img : devOps,
+    skils : ["Google Cloud","Ovh Cloud","AWS","Docker","Kubernetes","Nginx","Grafana","Splunk"]
+
   },
   {
     id: "bi-and-big-data",
     title : "BI and Big Data",
-    description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : biangbigData
+    description : "In the field of business intelligence and big data, thanks to the various projects I've worked on, I've had the opportunity to work on data-intensive applications. As an engineer, I've had to set up systems to collect, clean and visualize this data in order to help improve the services provided. ",
+    img : biangbigData,
+    skils : ["Dashboarding","Looker studio","Big Query"]
   },
   {
     id: "ai-and-machine-learning",
     title : "AI and Machine learning",
-    description : "Mollit laborum non minim velit esse ea qui. Dolore ad dolore consectetur sint proident sunt proident occaecat est enim nisi id velit dolore. Cupidatat minim nisi ipsum ipsum proident nostrud in adipisicing elit culpa velit. Irure id sint elit veniam nulla deserunt ut occaecat voluptate culpa esse et. Fugiat ipsum velit eu sint Lorem ex qui. Incididunt exercitation velit cupidatat dolor officia quis fugiat. Exercitation sit ullamco ullamco enim magna veniam elit Lorem amet.",
-    img : aiAndMl
+    description : "Some of the projects I've worked on have involved AI and machine learning. Particularly content recomendation. I had to extract data, define relevant metrics, clean up and train models on a wide range of datasets. Then, using this trained model, to recomend content. ",
+    img : aiAndMl,
+    skils : ["Python","R"]
   }
 ]
 
@@ -55,26 +60,35 @@ export default function Skils() {
           <div className={styles.right}>
             {skils?.map((s,i)=>{
               return(
-              <div key={i} id={s?.id} className={styles.skill+ " "+(i%2!=0 ? styles.odd : "")}>
-                <div className={styles.box}>
-                  <div className={styles.head}>
-                    <h3>{s?.title}</h3>
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M21.3386 12.552L9.86263 24.028L7.97729 22.1427L19.452 10.6667H9.33863V8H24.0053V22.6667H21.3386V12.552Z" ></path></svg>
+                <div key={i} id={s?.id} className={styles.skill+ " "+(i%2!=0 ? styles.odd : "")}>
+                  <div className={styles.box}>
+                    <div className={styles.head}>
+                      <h3>{s?.title}</h3>
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M21.3386 12.552L9.86263 24.028L7.97729 22.1427L19.452 10.6667H9.33863V8H24.0053V22.6667H21.3386V12.552Z" ></path></svg>
+                    </div>
+                    <div>
+                      <pre>{s?.description}</pre>
+                      <div className={styles.skils}>
+                        {s?.skils?.map((sk,i)=>{
+                          return(
+                            <div key={i} className={styles.skil}>
+                              {sk}
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <span>{s?.description}</span>
+                  <div className={styles.box}>
+                      <Image
+                        src={s?.img}
+                        width={300}
+                        height={350}
+                        layout='responsive'
+                        className={styles.img}
+                        />
                   </div>
                 </div>
-                <div className={styles.box}>
-                    <Image
-                      src={s?.img}
-                      width={300}
-                      height={350}
-                      layout='responsive'
-                      className={styles.img}
-                      />
-                </div>
-              </div>
               )
             })}
           </div>
