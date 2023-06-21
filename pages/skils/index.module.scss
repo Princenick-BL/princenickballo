@@ -4,8 +4,10 @@
     color: #fff;
     width: calc(100vw - 4rem );
     height: 100vh;
+    max-height: calc(100vh - 2rem);
     padding: 1rem 2rem;
     scroll-behavior: smooth;
+    overflow-y: scroll;
     @media screen and (max-width:750px) {
         padding: 1rem;
         width: calc(100vw - 2rem );
@@ -152,5 +154,22 @@
             align-items: center;
             justify-content: center;
         }
+    }
+}
+
+.scrollTop{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div:last-of-type{
+        font-size: 10px;
     }
 }

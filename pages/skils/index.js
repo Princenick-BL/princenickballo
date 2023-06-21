@@ -47,12 +47,12 @@ export default function Skils() {
   return (
     <>
       <HeadCustom preview={"/images/preview2.png"} theme='#202029'/>
-
+      <div id='top'></div>
       <div id='software-engineering' className={styles.main}>
       <div className={styles.logo}>
       <Link href={"/"}>Prince ING</Link>
       </div>
-        <h1 >My skils</h1>
+        <h1 id='top2'>My skils</h1>
         <div className={styles.container}>
           <div className={styles.left}>
 
@@ -94,6 +94,14 @@ export default function Skils() {
           </div>
         </div>
       </div>
+      <Link href={"#top2"}>
+        <div className={styles.scrollTop}>
+          <div>
+            {"⋀"}
+          </div>
+          <div>Scroll top</div>
+        </div>
+      </Link>
     </>
   )
 }
